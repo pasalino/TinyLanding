@@ -1,0 +1,23 @@
+{
+  "development": {
+    "dialect": "sqlite",
+    "storage": "./app/data/test.sqlite",
+    "sync": {
+      "force": true
+    },
+    "pool": {
+      "max": 5,
+      "idle": 30000,
+      "acquire": 60000
+    }
+  },
+  "production": {
+    "dialect": "sqlite",
+    "storage": "./app/data/test.sqlite",
+    "pool": {
+      "max": 5,
+      "idle": 30000,
+      "acquire": 60000
+    }
+  }
+}

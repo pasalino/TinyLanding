@@ -1,0 +1,24 @@
+{
+  "development": {
+    "host": "smtp.google.it",
+    "port": 465,
+    "secure": true,
+    "auth": {
+      "user": "xxx@google.it",
+      "pass": "xxx"
+    },
+    "from_name": "Pasqualino de Simone",
+    "from_mail": "xxx@google.it"
+  },
+  "production": {
+    "host": "smtp.google.it",
+    "port": 465,
+    "secure": true,
+    "auth": {
+      "user": "xxx@google.it",
+      "pass": "xxx"
+    },
+    "from_name": "Pasqualino de Simone",
+    "from_mail": "xxx@google.it"
+  }
+}

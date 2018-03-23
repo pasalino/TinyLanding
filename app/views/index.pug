@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    h1= title
+    h2= 'dddddd'
+
+    input#_csrf.form-control(type='text' name='_csrf' value=csrfToken)
+    input#name.form-control(type='text', placeholder='first and last' name='name')
+    button#send Sign up
