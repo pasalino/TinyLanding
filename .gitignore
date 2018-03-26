@@ -2,6 +2,7 @@
 node_modules
 package-lock.json
 yarn.lock
-app/logs/*
+app/data/logs/*
+app/data/cache/*
 app/data/*
 app/config/email.json

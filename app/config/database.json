@@ -14,6 +14,9 @@
   "production": {
     "dialect": "sqlite",
     "storage": "./app/data/test.sqlite",
+    "sync": {
+      "force": true
+    },
     "pool": {
       "max": 5,
       "idle": 30000,

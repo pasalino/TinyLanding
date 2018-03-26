@@ -4,7 +4,6 @@ const db = require("../db/models");
 
 const index = async (req, res, next) => {
     try {
-        console.log("dddd");
         const context = {csrfToken: req.csrfToken()};
         // db.Product.create({name: 'foo'}).then(task => {
         //     console.log("created");

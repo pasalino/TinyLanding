@@ -1,6 +1,5 @@
 'use strict';
 const nodeMailer = require('nodemailer');
-const pug = require('pug');
 
 const env = process.env.NODE_ENV || 'development';
 const config = require(__dirname + '/../config/email.json')[env];
