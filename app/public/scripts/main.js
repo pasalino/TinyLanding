@@ -1,18 +1,28 @@
-$(document).ready(function () {
-    $("#send").click(function (evt) {
-        var a = $("#name").val();
-        var token = $("#_csrf").val();
+$(function () {
+    $('#send_lead').on('click', function () {
+        let token = $('#_csrf').val();
+
+        let data = {
+            name: $('#name').val(),
+            surname: $('#surname').val(),
+            email: $('#email').val(),
+            phone: $('#phone').val(),
+            message: $('#message').val(),
+            company: $('#company').val(),
+            product: $('#product').val(),
+        };
+
         $.ajax({
-            type: "POST",
-            url: "/sendmail",
-            data: JSON.stringify({name: a}),
+            type: 'POST',
+            url: '/leads',
+            data: JSON.stringify(data),
             headers: {
-                'CSRF-Token': token
+                'CSRF-Token': token,
             },
             success: function (data) {
                 alert('data: ' + data);
             },
-            contentType: "application/json",
+            contentType: 'application/json',
             dataType: 'json'
         });
     });

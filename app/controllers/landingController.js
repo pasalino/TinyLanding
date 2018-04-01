@@ -1,26 +1,9 @@
 'use strict';
-const {sendMailFromTemplate} = require("../emails");
-const db = require("../db/models");
 
 const index = async (req, res, next) => {
     try {
-        const context = {csrfToken: req.csrfToken()};
-        // db.Product.create({name: 'foo'}).then(task => {
-        //     console.log("created");
-        //
-        // }).catch(err => {
-        //     next(err);
-        // });
+        const context = {csrfToken: req.csrfToken(), product_hash: '4870de00-3512-11e8-a612-5b7cd30edbfc'};
         res.render("index", context);
-    } catch (err) {
-        next(err);
-    }
-};
-
-const em = async (req, res, next) => {
-    try {
-        await sendMailFromTemplate("pasalino@gmail.com", "test", "lead", {name: "Pasqualino", subject: "Soggetto"});
-        res.render("index");
     } catch (err) {
         next(err);
     }
@@ -28,5 +11,4 @@ const em = async (req, res, next) => {
 
 module.exports = {
     index,
-    sendMail: em
 };

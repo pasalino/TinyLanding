@@ -11,18 +11,21 @@ module.exports = (sequelize, DataTypes) => {
             },
             email: {
                 type: DataTypes.STRING(500),
+                allowNull: false,
                 validate: {
                     isEmail: true,
                 }
             },
             phone: {
                 type: DataTypes.STRING(18),
-                allowNull:true
+                allowNull: true
             },
             message: DataTypes.STRING(4000),
             company: DataTypes.STRING(400),
         }
-        , {});
+        , {
+            tableName: 'Leads'
+        });
 
     Lead.associate = function (models) {
         Lead.belongsTo(models.Product, {

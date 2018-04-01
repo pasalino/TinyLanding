@@ -37,6 +37,5 @@ module.exports = app => {
         blacklist: [/\.min\.(css|js)$/],
         whitelist: null
     }));
-    console.log("ddd");
 
 };

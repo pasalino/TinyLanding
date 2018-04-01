@@ -1,7 +1,8 @@
 {
   "development": {
     "dialect": "sqlite",
-    "storage": "./app/data/test.sqlite",
+    "storage": "./app/data/data.sqlite",
+    "freezeTableName": true,
     "sync": {
       "force": true
     },
@@ -13,7 +14,9 @@
   },
   "production": {
     "dialect": "sqlite",
-    "storage": "./app/data/test.sqlite",
+    "logging": false,
+    "storage": "./app/data/data.sqlite",
+    "freezeTableName": true,
     "sync": {
       "force": true
     },

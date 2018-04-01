@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 
 const app = require('./app');
-const debug = require('debug')('TinyLanding');
 const http = require('http');
+const debug_info = require("./middlewares/logs").debug_info;
+const debug_error = require("./middlewares/logs").debug_error;
 
 global.appPath = __dirname;
 
@@ -30,10 +31,12 @@ function onError(error) {
     const bind = typeof port === 'string' ? 'Pipe ' + port : 'Port ' + port;
     switch (error.code) {
         case 'EACCES':
+            debug_error(bind + ' requires elevated privileges');
             console.error(bind + ' requires elevated privileges');
             process.exit(1);
             break;
         case 'EADDRINUSE':
+            debug_error(bind + ' is already in use');
             console.error(bind + ' is already in use');
             process.exit(1);
             break;
@@ -48,6 +51,6 @@ function onListening() {
         ? 'pipe ' + addr
         : 'port ' + addr.port;
     const message = 'Listening on ' + bind;
+    debug_info(message);
     console.log(message);
-    debug(message)
 }

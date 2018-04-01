@@ -1,5 +1,10 @@
 'use strict';
 const nodeMailer = require('nodemailer');
+const mustache = require("mustache");
+const fs = require('mz/fs');
+
+const debug_error = require('../middlewares/logs').debug_error;
+const debug_info = require('../middlewares/logs').debug_info;
 
 const env = process.env.NODE_ENV || 'development';
 const config = require(__dirname + '/../config/email.json')[env];
@@ -24,24 +29,23 @@ const sendMail = async (to, subject, text, html) => {
         html: html
     };
 
-    const is_debug = env === 'development';
     try {
-        const info = await transporter.sendMail(mailOptions)
-        if (is_debug) console.log('Message %s sent: %s', info.messageId, info.response);
+        const info = await transporter.sendMail(mailOptions);
+        debug_info('Message %s sent: %s', info.messageId, info.response);
     } catch (err) {
-        if (is_debug) console.error(err);
+        debug_error(err);
         throw err;
     }
 };
 
 
 const sendMailFromTemplate = async (to, subject, template, context) => {
-    const is_debug = env === 'development';
     try {
-        const html = pug.renderFile(`${__dirname}/templates/${template}.pug`, context);
+        const content = await fs.readFile(`${__dirname}/templates/${template}.mustache`);
+        const html = mustache.to_html(content.toString(), context);
         await sendMail(to, subject, null, html);
     } catch (err) {
-        if (is_debug) console.error(err);
+        debug_error(err);
         throw err;
     }
 };

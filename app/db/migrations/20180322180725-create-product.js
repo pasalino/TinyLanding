@@ -16,7 +16,13 @@ module.exports = {
             hash: {
                 type: Sequelize.UUID,
                 allowNull: true,
-                defaultValue: Sequelize.UUIDV1
+                defaultValue: Sequelize.UUIDV1,
+                unique: true
+            },
+            slug: {
+                type: Sequelize.STRING(50),
+                allowNull: false,
+                unique: true
             },
             createdAt: {
                 allowNull: true,

@@ -13,12 +13,22 @@
     <script type="text/javascript" src="/scripts/modernizr-3.5.0.min.js"></script>
     <script type="text/javascript" src="/scripts/plugins.js"></script>
     <script type="text/javascript" src="/scripts/main.js"></script>
+</head>
 <body class="c-layout-header-fixed c-layout-header-mobile-fixed">
 <!-- BEGIN: LAYOUT/HEADERS/HEADER-1 -->
 <!-- BEGIN: HEADER -->
-<header class="c-layout-header c-layout-header-4 c-layout-header-default-mobile" data-minimize-offset="80">ss</header>
-    <div class="c-navbar">cdscsdc</div>
-    <div>{{csrfToken}}</div>
+<header class="c-layout-header c-layout-header-4 c-layout-header-default-mobile" data-minimize-offset="80">Email
+</header>
+<input type="hidden" name="product" id="product" value="{{product_hash}}">
+<input type="hidden" name="_csrf" id="_csrf" value="{{csrfToken}}">
+<label for="name">Name</label><input type="text" name="name" id="name">
+<label for="surname">Surname</label><input type="text" name="surname" id="surname">
+<label for="email">Email</label><input type="email" name="email" id="email">
+<label for="phone">Phone</label><input type="text" name="phone" id="phone">
+<label for="company">Company</label><input type="text" name="company" id="company">
+<label for="message">Message</label><textarea name="message" id="message"></textarea>
+<button id="send_lead">Send</button>
+
 </body>
 
 </html>

@@ -20,7 +20,8 @@ module.exports = {
                 type: Sequelize.STRING(500),
                 validate: {
                     isEmail: true,
-                }
+                },
+                allowNull: false
             },
             phone: {
                 type: Sequelize.STRING(18),
@@ -36,7 +37,7 @@ module.exports = {
                 type: Sequelize.INTEGER,
                 onDelete: 'CASCADE',
                 references: {
-                    model: 'Product',
+                    model: 'Products',
                     key: 'id'
                 }
             },

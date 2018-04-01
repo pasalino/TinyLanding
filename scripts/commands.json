@@ -1,0 +1,49 @@
+{
+  "commands": [
+    {
+      "name": "help",
+      "short_name": "h",
+      "description": "Help commands"
+    },
+    {
+      "name": "list",
+      "short_name": "l",
+      "description": "List of all products"
+    },
+    {
+      "name": "add",
+      "short_name": "a",
+      "description": "Add product in database",
+      "args": [
+        {
+          "name": "product_name"
+        },
+        {
+          "name": "[slug]"
+        }
+      ]
+    },
+    {
+      "name": "leads",
+      "short_name": "ld",
+      "description": "Leads list of product",
+      "args": [
+        {
+          "name": "[slug]"
+        }
+      ]
+    },
+    {
+      "name": "leads2csv",
+      "description": "Leads to csv",
+      "args": [
+        {
+          "name": "outFilePath"
+        },
+        {
+          "name": "[slug]"
+        }
+      ]
+    }
+  ]
+}

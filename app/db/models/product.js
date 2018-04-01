@@ -6,13 +6,21 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,
                 unique: true
             },
+            slug: {
+                type: DataTypes.STRING(50),
+                allowNull: false,
+                unique: true
+            },
             hash: {
                 type: DataTypes.UUID,
                 allowNull: true,
+                unique: true,
                 defaultValue: DataTypes.UUIDV1
             }
         }
-        , {});
+        , {
+            tableName: 'Products'
+        });
 
     Product.associate = function (models) {
         Product.hasMany(models.Lead, {

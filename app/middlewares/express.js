@@ -4,7 +4,8 @@ const cookieParser = require('cookie-parser');
 const createError = require('http-errors');
 const csrf = require('csurf');
 
-
+const debug_info = require('debug')('TinyLanding:info');
+const debug_error = require('debug')('TinyLanding:error');
 
 module.exports = {
     CsrfToken: app => {
@@ -26,27 +27,29 @@ module.exports = {
 
         app.use((err, req, res, next) => {
             const status = err.status || 500;
-            const conttype = req.headers['content-type'];
+            const cont_type = req.headers['content-type'];
 
             if (err.code === 'EBADCSRFTOKEN') {
                 err.status = 403;
                 err.message = 'form tampered with';
             }
 
-            if (!is_production) {
-                console.error(`${status} - ${err.message}\n ${err.stack}`)
-            }
+            debug_error(`${status} - ${err.message}\n ${err.stack}`);
+
             res.status(status);
 
-            if (req.accepts('json') && conttype && conttype.indexOf('application/json') === 0) {
+            if (req.accepts('json') && cont_type && cont_type.indexOf('application/json') === 0) {
                 const content = {message: err.message, status: status};
                 if (!is_production) {
                     content['error_stack'] = err.stack;
                 }
+                console.error(err);
+                debug_error(`Error api ${JSON.stringify(content)}`);
                 res.json(content);
                 return;
             }
 
+            debug_error(`Error in request ${err.message}`);
             res.locals.message = err.message;
             res.locals.error = !is_production ? err : {};
             res.render('error');
