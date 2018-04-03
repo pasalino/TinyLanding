@@ -43,6 +43,7 @@ const leads_post = async (req, res, next) => {
 
     sendMailFromTemplate(data.email, `Lead from ${product.name} landing`, 'lead', data).catch(e => debug_error(e));
 
+
     const response = {status: 200, success: 'Lead created correctly'};
     res.status(response.status);
     res.json(response);
