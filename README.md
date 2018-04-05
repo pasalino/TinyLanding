@@ -2,7 +2,7 @@
 
 Your landing page and leads manager **out-of-the-box** with Node.js+Express.
 
-Create you landing page infrastructure in **30 second**. Tiny Landing is the easy out-of-the-box system for store **your leads in database** and manage it. Use your HTML for create landing and don't worry about anything else. Tiny Landing is write in Node.js + Express and is ready to use for all javascript developer in easy way.
+Create you landing page infrastructure in **30 second**. Tiny Landing is the easy out-of-the-box system for store **your leads in sqllite database** and manage it. Use your HTML for create landing and don't worry about anything else. Tiny Landing is write in Node.js + Express and is ready to use for all javascript developer in easy way.
 
 ## Table Of Contents
 - [Tinylanding](#tinylanding)
@@ -17,6 +17,7 @@ Create you landing page infrastructure in **30 second**. Tiny Landing is the eas
     + [Using](#using)
   * [Manage Tinylanding](#manage-tinylanding)
   * [Deployment](#deployment)
+  * [Roadmap](#roadmap)
   * [Contributing](#contributing)
   * [Versioning](#versioning)
   * [License](#license)
@@ -28,6 +29,7 @@ Create you landing page infrastructure in **30 second**. Tiny Landing is the eas
 * Send email to admin each lead form reached
 * Use CsrfToken for security
 * Compress the output in minified mode
+* Use sqllite
 
 ## Getting Started
 
@@ -112,7 +114,7 @@ In this mode, TinyLanding use optimized settings:
 * Istruction for create PM2 Services
 * Dockerize LandingPage
 * System for multiple landing page in one 
-
+* Provisioning on Heroku
 
 
 ## Contributing
