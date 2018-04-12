@@ -1,0 +1,19 @@
+<div id="error_box">
+    <h3>Ops! Something went wrong</h3>
+    <p>Please retry</p>
+</div>
+<form id="lead">
+    <input type="hidden" name="product" id="product" value="{{product_hash}}">
+    <input type="hidden" name="_csrf" id="_csrf" value="{{csrfToken}}">
+    <label for="name">Name</label><input type="text" name="name" id="name" placeholder="Name*">
+    <!--<label for="surname">Surname</label><input type="text" name="surname" id="surname" placeholder="Surname">-->
+    <label for="email">Email</label><input type="email" name="email" id="email" placeholder="E-mail*">
+    <!--<label for="phone">Phone</label><input type="text" name="phone" id="phone" placeholder="Phone">-->
+    <!--<label for="company">Company</label><input type="text" name="company" id="company" placeholder="Company">-->
+    <label for="message">Message</label><textarea name="message" id="message" placeholder="Message*"></textarea>
+    <button id="send_lead">Send</button>
+</form>
+<div id="thanks">
+    <h3>Thanks for your contact</h3>
+    <p>We will contact you as soon as possible!</p>
+</div>

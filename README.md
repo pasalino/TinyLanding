@@ -1,11 +1,12 @@
-# Tinylanding
+# TinyLanding
 
 Your landing page and leads manager **out-of-the-box** with Node.js+Express.
 
-Create you landing page infrastructure in **30 second**. Tiny Landing is the easy out-of-the-box system for store **your leads in sqllite database** and manage it. Use your HTML for create landing and don't worry about anything else. Tiny Landing is write in Node.js + Express and is ready to use for all javascript developer in easy way.
+Create you landing page infrastructure in **30 second**. TinyLanding is the easy out-of-the-box system for store **your leads in sqlite database** and manage it. Use your HTML for create landing and don't worry about anything else. TinyLanding is write in Node.js + Express and is ready to use for all javascript developer in easy way.
 
 ## Table Of Contents
-- [Tinylanding](#tinylanding)
+
+- [TinyLanding](#TinyLanding)
   * [Table Of Contents](#table-of-contents)
   * [Features](#features)
   * [Getting Started](#getting-started)
@@ -15,7 +16,7 @@ Create you landing page infrastructure in **30 second**. Tiny Landing is the eas
       - [HTML](#html)
       - [Mail Template](#mail-template)
     + [Using](#using)
-  * [Manage Tinylanding](#manage-tinylanding)
+  * [Manage TinyLanding](#manage-TinyLanding)
   * [Deployment](#deployment)
   * [Roadmap](#roadmap)
   * [Contributing](#contributing)
@@ -23,13 +24,14 @@ Create you landing page infrastructure in **30 second**. Tiny Landing is the eas
   * [License](#license)
 
 ## Features
+
 * Create landing page in simple way by HTML and CSS
 * Out-of-the-box leads system
 * Export leads in CSV
 * Send email to admin each lead form reached
 * Use CsrfToken for security
 * Compress the output in minified mode
-* Use sqllite
+* Use sqlite
 
 ## Getting Started
 
@@ -50,6 +52,7 @@ npm install
 ```
 
 ### Setup
+
 After install all dependences, the post-install script crate and execute all migrations on sqlite db.<br/>
 The database file is placed in `app/data` folder. You can change all db connection properties in config file `app/config/database.json`. Use **development** key for use in development and **production** key when you are ready to switch TinyLanding it in production mode.
 
@@ -59,10 +62,12 @@ Copy `app/config/email_dist.json` and rename it in `app/config/email.json`. Chan
 
 
 ### Customizing
+
 TinyLanding is the best way for frontender and webdesigner to create in rapid way a landing page in HTML with lead form contact. 
 The system use [mustache](https://mustache.github.io/) view engine system. You use your HTML, css and script directly in mustache file.
 
 #### HTML
+
 Change file `app/views/index.mustache` with your HTML for create your personal web page. 
 
 * *(Under costruction) Include template form.mustache in landing page*
@@ -84,8 +89,9 @@ If you want personalized message for this mail, change `app/templates/lead.musta
 
 For running the system use `npm start` command.
 
-## Manage Tinylanding
-Tiny landing use out-of-the-box system for store leads in db. The only choose at moment is use Sqlite db. For read all leads stored you can use script manager.
+## Manage TinyLanding
+
+TinyLanding use out-of-the-box system for store leads in db. The only choose at moment is use Sqlite db. For read all leads stored you can use script manager.
 
 Use `npm run leads` for show all leads stored in db.
 

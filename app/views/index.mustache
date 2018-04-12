@@ -1,34 +1,230 @@
 <!DOCTYPE html>
-<!--[if IE 9]> <html lang="it" class="ie9"> <![endif]-->
+<!-- https://color.adobe.com/it/create/color-wheel/?base=2&rule=Complementary&selected=0&name=Il%20mio%20tema%20Color&mode=rgb&rgbvalues=0.11473405741839873,0.7,0.2916278931825006,0.36390579631199815,1,0.5561622312266168,0.2639057963119982,1,0.48638675360080885,0.7,0.05122572069349931,0.044734057418398754,1,0.27119821821060874,0.2639057963119982&swatchOrder=0,1,2,3,4 -->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!-->
-<html lang="it">
+<html lang="en">
 <!--<![endif]-->
-<!-- BEGIN HEAD -->
 <head>
-    <meta charset="utf-8"/>
-    <title>JANGO222 | Ultimate Multipurpose Bootstrap HTML Theme - Default Home</title>
+    <title>TinyLanding | Your landing page and leads manager out-of-the-box with Node.js+Express</title>
+
+
     <link rel="stylesheet" href="/styles/normalize.css"/>
+    <link rel="stylesheet" href="/styles/animations.css"/>
     <link rel="stylesheet" href="/styles/main.css"/>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
+            integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
+            crossorigin="anonymous"></script>
     <script type="text/javascript" src="/jquery/jquery.js"></script>
     <script type="text/javascript" src="/scripts/modernizr-3.5.0.min.js"></script>
-    <script type="text/javascript" src="/scripts/plugins.js"></script>
-    <script type="text/javascript" src="/scripts/main.js"></script>
-</head>
-<body class="c-layout-header-fixed c-layout-header-mobile-fixed">
-<!-- BEGIN: LAYOUT/HEADERS/HEADER-1 -->
-<!-- BEGIN: HEADER -->
-<header class="c-layout-header c-layout-header-4 c-layout-header-default-mobile" data-minimize-offset="80">Email
-</header>
-<input type="hidden" name="product" id="product" value="{{product_hash}}">
-<input type="hidden" name="_csrf" id="_csrf" value="{{csrfToken}}">
-<label for="name">Name</label><input type="text" name="name" id="name">
-<label for="surname">Surname</label><input type="text" name="surname" id="surname">
-<label for="email">Email</label><input type="email" name="email" id="email">
-<label for="phone">Phone</label><input type="text" name="phone" id="phone">
-<label for="company">Company</label><input type="text" name="company" id="company">
-<label for="message">Message</label><textarea name="message" id="message"></textarea>
-<button id="send_lead">Send</button>
+    <script type="text/javascript" src="/scripts/jquery.waypoints.js"></script>
 
+    <script type="text/javascript" src="/scripts/main.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="description"
+          content="Create you landing page infrastructure in 30 second. TinyLanding is the easy out-of-the-box system for store your leads in database and manage it. Use your HTML for create landing and don't worry about anything else.">
+    <meta name="author" content="Pasqualino de Simone (pasalino)">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<a class="wp" id="home"></a>
+<header id="header">
+    <div id="headerContainer">
+        <a href="#slideShow" id="link_logo">
+            <img src="/img/logo.png" id="logo" alt="logo">
+        </a>
+        <div id="nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <menu>
+            <li class="title">
+                <h2>Menu</h2>
+            </li>
+            <li>
+                <a href="#learn-more">Learn More</a>
+            </li>
+            <li>
+                <a href="#quick-start">Quick Start</a>
+            </li>
+            <li>
+                <a href="#features">Features</a>
+            </li>
+            <li>
+                <a href="#about">About</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </menu>
+    </div>
+</header>
+<div id="slideShow">
+    <div class="animatedParent animateOnce">
+        <div class="animated bounceIn slideShow_container">
+            <h1>Create your <br class="mobile"/><strong>Landing Page</strong><br/>self-hosted</h1>
+            <div class="subtitle">
+                Your landing page and leads manager<br class="mobile"/><strong>out-of-the-box</strong><br
+                    class="mobile"/>with Node.js+Express.
+            </div>
+            <div class="button"><a href="https://github.com/pasalino/TinyLanding"><i class="fab fa-github"></i>
+                Download</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="learn-more" class="section_area limited animatedParent animateOnce">
+    <div class="animated fadeInDownShort">
+        <h2>Landing Page<br class="mobile"/> and <br class="mobile"/>Leads Manager</h2>
+        <div class="separator"></div>
+        <p>
+            Create you landing page infrastructure in <strong>30 second</strong>.
+        </p>
+        <p>
+            TinyLanding is the easy <strong>out-of-the-box</strong> system for
+            store your leads in <strong>sqlite database and manage it</strong>. Use your HTML for create landing and
+            don't worry about
+            anything else.
+        </p>
+        <p>
+            TinyLanding is write in Node.js + Express and is <strong>ready to use</strong> for all javascript developer
+            in easy way.
+        </p>
+        <p>
+            Deploy TinyLanding on your server or hosting <strong>without 3th party services</strong>
+        </p>
+    </div>
+
+</div>
+<div id="quick-start" class="section_area animatedParent animateOnce">
+    <div class="col_left cols animated bounceInLeft">
+        <div class="text">
+            <h2>Quickstart</h2>
+            <div class="separator"></div>
+            TinyLanding is easy to install, rapid to deploy, ready to use.
+            <h3>Step 1 - Use yarn or npm to install it</h3>
+            <span class="code_area">
+                npm install
+            </span>
+            <h3>Step 2 - Run</h3>
+            <span class="code_area">
+                npm start
+            </span>
+            <h3>Step 3 - Open the browser</h3>
+            <span class="code_area">
+                http://localhost:3000
+            </span>
+            <p>Enjoy!</p>
+        </div>
+    </div>
+    <div class="col_right cols">
+        <div class="right parallax-window" data-parallax="scroll" data-iosFix="false" data-androidFix="false"
+             data-image-src="/img/parallax.jpg">
+        </div>
+    </div>
+</div>
+<div id="features" class="section_area">
+    <h2>MAIN FEATURES</h2>
+    <div class="separator"></div>
+    <div class="container  animatedParent animateOnce">
+        <div class="box_left box animated fadeInLeft">
+            Self contained system
+            <div class="icon">
+                <div class="fab fa-node-js"></div>
+            </div>
+        </div>
+        <div class="box_right box animated fadeInRight">
+            <div class="icon">
+                <div class="fas fa-table"></div>
+            </div>
+            Export leads in CSV
+        </div>
+    </div>
+    <div class="container  animatedParent animateOnce">
+        <div class="box_left box animated fadeInLeft delay-250">
+            Email for each lead form reached
+            <div class="icon">
+                <div class="fas fa-envelope"></div>
+            </div>
+        </div>
+        <div class="box_right box animated fadeInRight delay-250">
+            <div class="icon">
+                <div class="fas fa-play"></div>
+            </div>
+            Ready to production
+        </div>
+    </div>
+    <div class="container  animatedParent animateOnce">
+        <div class="box_left box animated fadeInLeft delay-500">
+            Use HTML+JS+CSS
+            <div class="icon">
+                <div class="fab fa-html5"></div>
+            </div>
+        </div>
+
+        <div class="box_right box animated fadeInRight delay-500">
+            <div class="icon">
+                <div class="fas fa-file-code"></div>
+            </div>
+            Landing template ready
+        </div>
+    </div>
+</div>
+<div id="about" class="section_area">
+    <div class="col_left cols">
+        <div class="right parallax-window" data-parallax="scroll" data-image-src="/img/team.jpeg">
+        </div>
+    </div>
+    <div class="col_right cols animatedParent animateOnce">
+        <div class="text  fadeInRight animated">
+            <h2>About</h2>
+            <div class="separator"></div>
+            <img src="/img/about.jpg" alt="Pasqualino de Simone">
+            <h3>Pasqualino de Simone</h3>
+            <p>Creator & maintainer</p>
+            <em>"I love easy way to build value"</em>
+            <br/>
+            <a>tartarugamaori.it</a>
+            <div class="social">
+                <a href="https://github.com/pasalino" target="_blank"><i class="fab fa-github-alt"></i></a>
+                <a href="https://it.linkedin.com/in/pasalino" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://twitter.com/tartarugamaori" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="mailto:pasalino@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="contact">
+    <div class="col_left cols">
+        <div class="text">
+            <div class="image">
+                <img src="/img/logo.png" id="logo" alt="logo">
+            </div>
+
+            <p>TinyLanding your Landing Page system for catch leads.
+                <br/>TinyLanding is free software under MIT licence.
+                <br/>You can use this software for commercial and personal use whitout limits.
+                <br/>No responsibility for the use of this solution is assumed
+            </p>
+        </div>
+    </div>
+    <div class="col_right cols">
+        <div class="text">
+            <h2>Contact Us</h2>
+            {{> form}}
+        </div>
+    </div>
+
+</div>
+<footer>
+    TinyLanding - A landing page system wrote in Node.js+Express
+    <a class="wp" id="footer"></a>
+</footer>
+<script type="text/javascript" src="/scripts/css3-animate-it.js"></script>
+<script type="text/javascript" src="/scripts/parallax.js"></script>
 </body>
 
 </html>

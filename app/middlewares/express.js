@@ -13,6 +13,14 @@ module.exports = {
     },
 
     HeaderMiddleware: app => {
+        const is_production = app.get('env') === 'production';
+
+        if (!is_production) {
+            app.use(function (req, res, next) {
+                req.headers['if-none-match'] = 'no-match-for-this';
+                next();
+            });
+        }
         app.use(cookieParser());
         app.use(express.json());
         app.use(express.urlencoded({extended: false}));
