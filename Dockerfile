@@ -5,10 +5,10 @@ ENV PORT 80
 
 RUN mkdir /tinylanding
 WORKDIR /tinylanding
-COPY package.json /tinylanding
+
+ADD . /tinylanding
 
 RUN npm install
 
-ADD . /tinylanding
 
 CMD npm start
