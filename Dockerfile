@@ -8,7 +8,8 @@ WORKDIR /tinylanding
 
 ADD . /tinylanding
 
-RUN npm install
-
+RUN npm install --ignore-scripts
+RUN npm run migrate
+RUN npm run seed-db
 
 CMD npm start
