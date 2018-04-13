@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+    tinylanding:
+        build: .
+        container_name: "tinylanding"
+        ports:
+            - 80:80
+        volumes:
+            - data:/app/data
+
+volumes:
+    data:
