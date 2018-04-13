@@ -9,6 +9,8 @@ WORKDIR /tinylanding
 ADD . /tinylanding
 
 RUN npm install --ignore-scripts
+RUN npm install sqlite3
+RUN npm install --only=dev
 RUN npm run migrate
 RUN npm run seed-db
 
