@@ -20,6 +20,7 @@ Create you landing page infrastructure in **30 second**. TinyLanding is the easy
     + [Using](#using)
   * [Manage TinyLanding](#manage-TinyLanding)
   * [Deployment](#deployment)
+    + [Deploy on Docker](#deploy-on-docker)
   * [Roadmap](#roadmap)
   * [Contributing](#contributing)
   * [Versioning](#versioning)
@@ -74,8 +75,8 @@ Change file `app/views/index.mustache` with your HTML for create your personal w
 
 * *(Under costruction) Include template form.mustache in landing page*
 * *(Under costruction) Include JQuery and main.js scripts*
-* *(Under costruction)Include main.css*
-* *(Under costruction)Errorfile*
+* *(Under costruction) Include main.css*
+* *(Under costruction) Errorfile*
 
 In `app/public` folder there is all public asset for landing. This file is reached from root url. In this folder you include all CSS, scripts, images, other assets used in your landing.
 
@@ -117,12 +118,25 @@ In this mode, TinyLanding use optimized settings:
 > Remember to use process manager for production mode e.g. [PM2](http://pm2.keymetrics.io/)<br/>
 > A process manager is a “container” for applications that facilitates deployment, provides high availability, and enables you to manage the application at runtime.
 
+
+### Deploy on Docker (Under Construction) 
+
+You can create docker container:
+
+1. Build
+
+2. Run
+
+You can use docker-compose for run TinyLanding in production 
+
 ## Roadmap
 
 * Istruction for create PM2 Services
-* Dockerize LandingPage
 * System for multiple landing page in one 
 * Provisioning on Heroku
+* Documentation for edit template
+* Documentation for run in docker
+* Create config system
 
 
 ## Contributing
