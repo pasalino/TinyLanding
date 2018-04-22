@@ -1,4 +1,5 @@
 # TinyLanding
+[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
 Your landing page and leads manager **out-of-the-box** with Node.js+Express.
 
@@ -138,6 +139,9 @@ You can use docker-compose for run TinyLanding in production
 * Documentation for run in docker
 * Create config system
 
+## Maintainers
+
+[Pasqualino de Simone @pasalino](http://www.github.com/pasalino)
 
 ## Contributing
 
