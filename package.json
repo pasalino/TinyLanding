@@ -3,7 +3,16 @@
   "version": "1.0.0",
   "description": "Boilerplate for Landing Page",
   "main": "app/index.js",
-  "author": "pasalino - de Simone Pasqualino - pasalino@gmail.com",
+  "author": {
+    "name": "Barney Rubble",
+    "email": "pasalino@gmail.com",
+    "url": "https://pasalino.com"
+  },
+  "homepage": "https://www.tinylanding.site",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pasalino/TinyLanding"
+  },
   "license": "MIT",
   "dependencies": {
     "compression": "^1.7.2",
