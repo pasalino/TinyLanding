@@ -18,5 +18,3 @@ module.exports = async(args) => {
     console.error(err);
   }
 };
-
-

@@ -38,5 +38,3 @@ module.exports = async(args) => {
     Message: (item.message || '').substr(0, 20),
   }));
 };
-
-

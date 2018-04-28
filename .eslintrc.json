@@ -1,0 +1,27 @@
+{
+  "extends": [
+    "strongloop"
+  ],
+  "env": {
+    "mocha": true,
+    "node": true,
+    "jquery": true
+  },
+  "globals": {
+    "expect": true
+  },
+  "rules": {
+    "padded-blocks": 0,
+    "no-use-before-define": [
+      2,
+      "nofunc"
+    ],
+    "no-unused-expressions": 0,
+    "max-len": [
+      2,
+      120,
+      8
+    ]
+  },
+  "parser": "babel-eslint"
+}

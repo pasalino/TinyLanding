@@ -1,23 +1,12 @@
-if (!process.env.NODE_ENV) {
-  process.env.NODE_ENV = 'production';
-}
-
 require('console.table');
 const db = require('../app/db/models/index');
 const slugify = require('slugify');
-const debug_info = require('../app/middlewares/logs').debug_info;
-const debug_error = require('../app/middlewares/logs').debug_error;
 
 module.exports = async(args) => {
-  debug_info('Add new Product');
-  debug_info(`Args list: ${args}`);
-
   let product_name = null;
 
   try {
-    product_name = args[0];
-    if (!product_name) throw new Error('is empty');
-    debug_info(`Product name: ${product_name}`);
+    product_name = args.name;
   } catch (e) {
     console.error('product_name is required');
     return;
@@ -52,9 +41,7 @@ module.exports = async(args) => {
     const product = await db.Product.create({name: product_name, slug});
     console.log(`Product '${product.name}' created correctly, slug: ${slug}, hash: ${product.hash}`);
   } catch (e) {
-    debug_error(JSON.stringify(e));
+    // debug_error(JSON.stringify(e));
     console.log(`Error in create new product: ${product_name}`);
   }
 };
-
-

@@ -4,13 +4,8 @@ if (!process.env.NODE_ENV) {
 
 require('console.table');
 const db = require('../app/db/models/index');
-const debug_info = require('../app/middlewares/logs').debug_info;
 
-module.exports = async(args) => {
-  debug_info('Product List');
-  debug_info(`Args list: ${args}`);
-
-
+module.exports = async() => {
   const products = await db.Product.findAll({
     order: [
       ['createdAt', 'DESC'],
@@ -26,13 +21,13 @@ module.exports = async(args) => {
 
 
   const product_list = products.map(item => ({
+    Id: item.id,
     Name: item.name,
     Slug: item.slug,
     Hash: item.hash,
+    Created: item.createdAt,
     Leads: item.dataValues.leads_count,
   }));
 
   console.table(product_list);
 };
-
-

@@ -9,5 +9,3 @@ module.exports = async(args) => {
   const leads_list = await getLeads(args);
   console.table(leads_list);
 };
-
-
