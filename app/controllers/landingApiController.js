@@ -1,12 +1,11 @@
 const db = require('../db/models');
 const validator = require('email-validator');
-const sendMailFromTemplate = require('../emails').sendMailFromTemplate;
-const debug_error = require('../middlewares/logs').debug_error;
-const debug_info = require('../middlewares/logs').debug_info;
+const { sendMailFromTemplate } = require('../emails');
+const { debugError, debugInfo } = require('../middlewares/logs');
 
-const leads_post = async(req, res, next) => {
+const leadsPost = async (req, res, next) => {
   const data = req.body;
-  debug_info(data);
+  debugInfo(data);
 
   if (!data.name || !data.name.trim()) {
     return next(new Error('Name is required'));
@@ -22,10 +21,10 @@ const leads_post = async(req, res, next) => {
 
   let product = null;
   try {
-    product = await db.Product.findOne({where: {hash: data.product}});
-    debug_info(`Product id ${product.id}`);
+    product = await db.Product.findOne({ where: { hash: data.product } });
+    debugInfo(`Product id ${product.id}`);
   } catch (e) {
-    debug_error(e);
+    debugError(e);
     return next(new Error('Product is not exists'));
   }
 
@@ -34,18 +33,18 @@ const leads_post = async(req, res, next) => {
     data.ProductId = product.id;
     await db.Lead.create(data);
   } catch (e) {
-    debug_error(e);
+    debugError(e);
     return next(new Error('error in create lead'));
   }
 
-  sendMailFromTemplate(data.email, `Lead from ${product.name} landing`, 'lead', data).catch(e => debug_error(e));
+  sendMailFromTemplate(data.email, `Lead from ${product.name} landing`, 'lead', data).catch(e => debugError(e));
 
 
-  const response = {status: 200, success: 'Lead created correctly'};
+  const response = { status: 200, success: 'Lead created correctly' };
   res.status(response.status);
-  res.json(response);
+  return res.json(response);
 };
 
 module.exports = {
-  leads_post,
+  leadsPost,
 };

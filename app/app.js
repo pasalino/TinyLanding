@@ -1,7 +1,7 @@
 const express = require('express');
-const {Logger} = require('./middlewares/logs');
+const { Logger } = require('./middlewares/logs');
 const ProductionMiddleware = require('./middlewares/production');
-const {HeaderMiddleware, FooterMiddleware} = require('./middlewares/express');
+const { HeaderMiddleware, FooterMiddleware } = require('./middlewares/express');
 const Static = require('./middlewares/staticAsset');
 const ViewsEngine = require('./middlewares/viewsEngine');
 const Routes = require('./routes');

@@ -5,7 +5,7 @@ if (!process.env.NODE_ENV) {
 require('console.table');
 const getLeads = require('./getLeads');
 
-module.exports = async(args) => {
-  const leads_list = await getLeads(args);
-  console.table(leads_list);
+module.exports = async (args) => {
+  const leadsList = await getLeads(args);
+  console.table(leadsList);
 };

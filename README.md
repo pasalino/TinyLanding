@@ -1,5 +1,7 @@
 # TinyLanding
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+[![airbnb-style](https://img.shields.io/badge/eslint-airbnb-4B32C3.svg)](https://github.com/airbnb/javascript)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpasalino%2FTinyLanding.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fpasalino%2FTinyLanding?ref=badge_shield)
 
 Your landing page and leads manager **out-of-the-box** with Node.js+Express.
 
@@ -139,6 +141,9 @@ You can use docker-compose for run TinyLanding in production
 * Documentation for run in docker
 * Create config system
 * Adding Test
+* Add linter for javascript client-site
+* Add linter for css
+* Add linker for html
 
 ## Maintainers
 

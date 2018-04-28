@@ -5,7 +5,7 @@ if (!process.env.NODE_ENV) {
 require('console.table');
 const db = require('../app/db/models/index');
 
-module.exports = async() => {
+module.exports = async () => {
   const products = await db.Product.findAll({
     order: [
       ['createdAt', 'DESC'],
@@ -20,7 +20,7 @@ module.exports = async() => {
   });
 
 
-  const product_list = products.map(item => ({
+  const productList = products.map(item => ({
     Id: item.id,
     Name: item.name,
     Slug: item.slug,
@@ -29,5 +29,5 @@ module.exports = async() => {
     Leads: item.dataValues.leads_count,
   }));
 
-  console.table(product_list);
+  console.table(productList);
 };

@@ -2,46 +2,41 @@ require('console.table');
 const db = require('../app/db/models/index');
 const slugify = require('slugify');
 
-module.exports = async(args) => {
-  let product_name = null;
+module.exports = async (args) => {
+  let productName = null;
 
   try {
-    product_name = args.name;
+    productName = args.name;
   } catch (e) {
     console.error('product_name is required');
     return;
   }
 
-  let slug = null;
-  if (args[1]) {
-    slug = args[1];
-  } else {
-    slug = slugify(product_name);
-  }
+  const slug = args[1] ? args[1] : slugify(productName);
 
-  const exists_product = (await db.Product.count({
-    where: {name: product_name},
+  const existsProduct = (await db.Product.count({
+    where: { name: productName },
   })) !== 0;
 
-  if (exists_product) {
-    console.log(`Product '${product_name}' already exists!`);
+  if (existsProduct) {
+    console.log(`Product '${productName}' already exists!`);
     return;
   }
 
-  const exists_slug = (await db.Product.count({
-    where: {slug},
+  const existsSlug = (await db.Product.count({
+    where: { slug },
   })) !== 0;
 
-  if (exists_slug) {
+  if (existsSlug) {
     console.log(`Slug '${slug}'  already exists!`);
     return;
   }
 
   try {
-    const product = await db.Product.create({name: product_name, slug});
+    const product = await db.Product.create({ name: productName, slug });
     console.log(`Product '${product.name}' created correctly, slug: ${slug}, hash: ${product.hash}`);
   } catch (e) {
     // debug_error(JSON.stringify(e));
-    console.log(`Error in create new product: ${product_name}`);
+    console.log(`Error in create new product: ${productName}`);
   }
 };

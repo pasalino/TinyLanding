@@ -1,23 +1,12 @@
-
-
-const index = async(req, res, next) => {
+const index = async (req, res, next) => {
   try {
-    const context = {csrfToken: req.csrfToken(), product_hash: '4870de00-3512-11e8-a612-5b7cd30edbfc'};
+    const context = { csrfToken: req.csrfToken(), product_hash: '4870de00-3512-11e8-a612-5b7cd30edbfc' };
     res.render('index', context);
   } catch (err) {
     next(err);
   }
 };
 
-// const landing = async(req, res, next) => {
-//   try {
-//     const context = {csrfToken: req.csrfToken(), product_hash: '4870de00-3512-11e8-a612-5b7cd30edbfc'};
-//     res.render(req.params.page, context);
-//   } catch (err) {
-//     next(err);
-//   }
-// };
-//
 
 module.exports = {
   index,

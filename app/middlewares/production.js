@@ -5,13 +5,13 @@ const compression = require('compression');
 const minify = require('express-minify');
 const path = require('path');
 
-module.exports = app => {
+module.exports = (app) => {
   app.use((req, res, next) => {
     res.oldRender = res.render;
-    res.render = function(view, options) {
-      this.oldRender(view, options, function(err, html) {
+    res.render = (view, options) => {
+      this.oldRender(view, options, (err, html) => {
         if (err) throw err;
-        html = Minifier.minify(html, {
+        const newHtml = Minifier.minify(html, {
           removeComments: true,
           removeCommentsFromCDATA: true,
           collapseWhitespace: true,
@@ -19,7 +19,7 @@ module.exports = app => {
           removeAttributeQuotes: true,
           removeEmptyAttributes: true,
         });
-        res.send(html);
+        res.send(newHtml);
       });
     };
     next();
@@ -37,5 +37,4 @@ module.exports = app => {
     blacklist: [/\.min\.(css|js)$/],
     whitelist: null,
   }));
-
 };
