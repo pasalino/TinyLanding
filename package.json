@@ -23,7 +23,8 @@
     "debug-verbose": "DEBUG=* ./node_modules/.bin/nodemon ./app/index.js",
     "migrate": "./node_modules/.bin/sequelize db:migrate",
     "seed-db": "./node_modules/.bin/sequelize db:seed:all",
-    "manage": "node ./bin/manage.js"
+    "manage": "node ./bin/manage.js",
+    "pretest": "echo 'dd'"
   },
   "dependencies": {
     "chalk": "^2.4.1",
