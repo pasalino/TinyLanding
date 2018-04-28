@@ -24,7 +24,7 @@
     "migrate": "./node_modules/.bin/sequelize db:migrate",
     "seed-db": "./node_modules/.bin/sequelize db:seed:all",
     "manage": "node ./bin/manage.js",
-    "pretest": "echo 'dd'"
+    "pretest": "eslint --ignore-path .eslintignore ."
   },
   "dependencies": {
     "chalk": "^2.4.1",
@@ -53,6 +53,10 @@
     "yargs": "^11.0.0"
   },
   "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-strongloop": "^2.1.0",
     "nodemon": "^1.17.2",
     "sequelize-cli": "^4.0.0"
   }

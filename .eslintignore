@@ -1,0 +1,9 @@
+.idea
+node_modules
+yarn.lock
+app/data/*
+app/data/logs/*
+app/data/cache/*
+app/config/email.json
+
+app/public/scripts
