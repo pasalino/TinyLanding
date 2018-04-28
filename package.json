@@ -1,6 +1,6 @@
 {
   "name": "TinyLanding",
-  "version": "1.0.0",
+  "version": "0.1.0a",
   "description": "Boilerplate for Landing Page",
   "main": "app/index.js",
   "author": {
@@ -14,7 +14,19 @@
     "url": "https://github.com/pasalino/TinyLanding"
   },
   "license": "MIT",
+  "bin": {
+    "tiny-landing": "./scripts/manage.js"
+  },
+  "scripts": {
+    "start": "node ./app/index.js",
+    "debug": "DEBUG=TinyLanding* ./node_modules/.bin/nodemon ./app/index.js",
+    "debug-verbose": "DEBUG=* ./node_modules/.bin/nodemon ./app/index.js",
+    "migrate": "./node_modules/.bin/sequelize db:migrate",
+    "seed-db": "./node_modules/.bin/sequelize db:seed:all",
+    "manage": "node ./bin/manage.js"
+  },
   "dependencies": {
+    "chalk": "^2.4.1",
     "compression": "^1.7.2",
     "console.table": "^0.10.0",
     "cookie-parser": "^1.4.3",
@@ -36,19 +48,11 @@
     "sequelize": "^4.37.4",
     "serve-favicon": "^2.4.5",
     "slugify": "^1.2.9",
-    "sqlite3": "^4.0.0"
+    "sqlite3": "^4.0.0",
+    "yargs": "^11.0.0"
   },
   "devDependencies": {
     "nodemon": "^1.17.2",
     "sequelize-cli": "^4.0.0"
-  },
-  "scripts": {
-    "start": "node ./app/index.js",
-    "debug": "DEBUG=TinyLanding* ./node_modules/.bin/nodemon ./app/index.js",
-    "debug-verbose": "DEBUG=* ./node_modules/.bin/nodemon ./app/index.js",
-    "migrate": "./node_modules/.bin/sequelize db:migrate",
-    "seed-db": "./node_modules/.bin/sequelize db:seed:all",
-    "manage": "node ./scripts/manage.js",
-    "postinstall": "npm run migrate; npm run seed-db"
   }
 }

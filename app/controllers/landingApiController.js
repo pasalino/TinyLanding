@@ -2,7 +2,6 @@
 const db = require('../db/models');
 const validator = require("email-validator");
 const sendMailFromTemplate = require("../emails").sendMailFromTemplate;
-
 const debug_error = require('../middlewares/logs').debug_error;
 const debug_info = require('../middlewares/logs').debug_info;
 

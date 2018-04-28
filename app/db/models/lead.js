@@ -22,6 +22,12 @@ module.exports = (sequelize, DataTypes) => {
             },
             message: DataTypes.STRING(4000),
             company: DataTypes.STRING(400),
+            createdAt: {
+                type: DataTypes.DATE,
+            },
+            updatedAt: {
+                type: DataTypes.DATE,
+            }
         }
         , {
             tableName: 'Leads'

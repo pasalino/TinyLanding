@@ -138,6 +138,7 @@ You can use docker-compose for run TinyLanding in production
 * Documentation for edit template
 * Documentation for run in docker
 * Create config system
+* Adding Test
 
 ## Maintainers
 

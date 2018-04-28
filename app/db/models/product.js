@@ -16,9 +16,16 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: true,
                 unique: true,
                 defaultValue: DataTypes.UUIDV1
+            },
+            createdAt: {
+                type: DataTypes.DATE,
+            },
+            updatedAt: {
+                type: DataTypes.DATE,
             }
         }
-        , {
+        ,
+        {
             tableName: 'Products'
         });
 
