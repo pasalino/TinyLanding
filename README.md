@@ -1,4 +1,6 @@
 # TinyLanding
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpasalino%2FTinyLanding.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fpasalino%2FTinyLanding?ref=badge_shield)
+
 
 Your landing page and leads manager **out-of-the-box** with Node.js+Express.
 
@@ -25,6 +27,9 @@ Create you landing page infrastructure in **30 second**. TinyLanding is the easy
   * [Contributing](#contributing)
   * [Versioning](#versioning)
   * [License](#license)
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpasalino%2FTinyLanding.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fpasalino%2FTinyLanding?ref=badge_large)
 
 ## Features
 
