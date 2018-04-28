@@ -10,17 +10,18 @@ const yargs = require('yargs').usage(chalk.underline(`Manage landing and leads i
     'help',
     'Show usage instructions.',
   )
-  .command('list', 'List of all landing', () => {
-  }, landingList)
+  .command('list', 'List of all landing', () => {}, landingList)
   .command('add [name]', 'Add new landing page', (args) => {
     args
       .positional('name', {
         alias: 'n',
         describe: 'Name of landing page',
       })
+      .option('slug', {
+        describe: 'Slug for landing',
+      })
       .option('v', {
         alias: 'verbose',
-        default: false,
         describe: 'Verbose mode',
       })
       .demandOption(['name']);
