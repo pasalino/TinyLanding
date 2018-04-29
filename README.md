@@ -3,10 +3,11 @@
 [![airbnb-style](https://img.shields.io/badge/eslint-airbnb-4B32C3.svg)](https://github.com/airbnb/javascript)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpasalino%2FTinyLanding.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fpasalino%2FTinyLanding?ref=badge_shield)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Dependency Status](https://beta.gemnasium.com/badges/github.com/pasalino/TinyLanding.svg)](https://beta.gemnasium.com/projects/github.com/pasalino/TinyLanding)
 [![Maintainability](https://api.codeclimate.com/v1/badges/8d16bd77e8894ef68299/maintainability)](https://codeclimate.com/github/pasalino/TinyLanding/maintainability)
+[![Build Status](https://travis-ci.org/pasalino/TinyLanding.svg?branch=master)](https://travis-ci.org/pasalino/TinyLanding)
 [![codecov](https://codecov.io/gh/pasalino/TinyLanding/branch/master/graph/badge.svg)](https://codecov.io/gh/pasalino/TinyLanding)
 [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/1809/badge)](https://bestpractices.coreinfrastructure.org/projects/1809)
-[![Dependency Status](https://beta.gemnasium.com/badges/github.com/pasalino/TinyLanding.svg)](https://beta.gemnasium.com/projects/github.com/pasalino/TinyLanding)
 
 Your landing page and leads manager **out-of-the-box** with Node.js+Express.
 
