@@ -5,7 +5,7 @@ const fs = require('mz/fs');
 const { debugError, debugInfo } = require('../middlewares/logs');
 
 const env = process.env.NODE_ENV || 'development';
-const config = require('../config/email.json')[env];
+const config = require('../config/email_dist.json')[env];
 
 const transporter = nodeMailer.createTransport({
   host: config.host,
