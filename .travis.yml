@@ -6,4 +6,4 @@ install:
   - npm install
 script:
   - npm test
-  - codecov
+  - npm run report-coverage
