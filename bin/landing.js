@@ -14,14 +14,13 @@ const slugifyWithCheckDb = async (name, verbose, baseSlug = null, index = 0) => 
   const existsSlug = (await db.Product.count({ where: { slug: newSlug } })) !== 0;
   if (verbose && existsSlug)console.log(chalk.yellow(`Slug ${newSlug} already exists`));
   if (existsSlug) newSlug = await slugifyWithCheckDb(name, verbose, baseSlug, index + 1);
-
   return newSlug;
 };
 
 
 module.exports =
 {
-  landinfList: async (args) => {
+  landingList: async (args) => {
     const { hash, order } = args;
     console.log(args);
 

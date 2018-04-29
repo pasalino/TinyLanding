@@ -44,8 +44,6 @@ const yargs = require('yargs').usage(chalk.underline(`Manage landing and leads i
       .strict()
       .demandOption(['name']);
   }, landingAdd)
-  .command('remove-landing', 'Remove landing page', () => {
-  }, landingAdd)
   .command('leads', 'Show leads for landing page', (args) => {
     args
       .option('name', {
