@@ -15,7 +15,7 @@
   },
   "license": "MIT",
   "bin": {
-    "tiny-landing": "./scripts/manage.js"
+    "tiny-landing": "./bin/manage.js"
   },
   "scripts": {
     "start": "node ./app/index.js",
@@ -28,7 +28,7 @@
     "lint": "./node_modules/.bin/eslint --ignore-path .eslintignore .",
     "pretest": "./node_modules/.bin/eslint --ignore-path .eslintignore .",
     "test": "./node_modules/.bin/mocha --reporter spec test/*.js",
-    "report-coverage": "./node_modules/.bin/nyc npm test && ./node_modules/.bin/nyc report --reporter=text-lcov > coverage.lcov && codecov -t a489d4b7-ebae-4a71-ae83-f6f171ecace8"
+    "report-coverage": "./node_modules/.bin/nyc npm test && ./node_modules/.bin/nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "dependencies": {
     "chalk": "^2.4.1",
