@@ -4,8 +4,6 @@ env:
   - NODE_ENV='production'
 node_js:
   - "stable"
-before_install:
-  - export PATH=\`echo ${PATH} | sed -re 's,(^|:)(./)?node_modules/.bin($|:),\1,'\`
 install:
   - npm install -g codecov
 script:
