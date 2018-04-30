@@ -27,8 +27,8 @@
     "postinstall": "node ./bin/setup && npm run migrate && npm run seed-db",
     "lint": "./node_modules/.bin/eslint --ignore-path .eslintignore .",
     "pretest": "./node_modules/.bin/eslint --ignore-path .eslintignore .",
-    "test": "mocha --reporter spec test/*.js",
-    "report-coverage": "./node_modules/.bin/nyc npm test && nyc report --reporter=text-lcov > coverage.lcov"
+    "test": "./node_modules/.bin/mocha --reporter spec test/*.js",
+    "report-coverage": "./node_modules/.bin/nyc npm test && ./node_modules/.bin/nyc report --reporter=text-lcov > coverage.lcov"
   },
   "dependencies": {
     "chalk": "^2.4.1",
