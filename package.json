@@ -24,8 +24,9 @@
     "migrate": "./node_modules/.bin/sequelize db:migrate",
     "seed-db": "./node_modules/.bin/sequelize db:seed:all",
     "manage": "node ./bin/manage.js",
-    "pretest": "eslint --ignore-path .eslintignore .",
+    "postinstall": "node ./bin/setup && npm run migrate && npm run seed-db",
     "lint": "eslint src test",
+    "pretest": "eslint --ignore-path .eslintignore .",
     "test": "mocha --reporter spec test/*.js",
     "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
