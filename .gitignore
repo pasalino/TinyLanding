@@ -6,3 +6,4 @@ app/data/logs/*
 app/data/cache/*
 app/config/email.json
 .nyc_output
+coverage.lcov
