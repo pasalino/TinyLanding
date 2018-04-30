@@ -35,6 +35,9 @@ Create you landing page infrastructure in **30 second**. TinyLanding is the easy
   * [Versioning](#versioning)
   * [License](#license)
 
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpasalino%2FTinyLanding.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fpasalino%2FTinyLanding?ref=badge_large)
+
 ## Features
 
 * Create landing page in simple way by HTML and CSS
