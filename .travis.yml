@@ -5,7 +5,6 @@ env:
 node_js:
   - "stable"
 install:
-  - npm install --only=dev
   - npm install -g codecov
 script:
   - npm run report-coverage
