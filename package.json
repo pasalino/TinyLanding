@@ -28,7 +28,7 @@
     "lint": "./node_modules/.bin/eslint --ignore-path .eslintignore .",
     "pretest": "./node_modules/.bin/eslint --ignore-path .eslintignore .",
     "test": "./node_modules/.bin/mocha --reporter spec test/*.js",
-    "report-coverage": "./node_modules/.bin/nyc npm test && ./node_modules/.bin/nyc report --reporter=text-lcov > coverage.lcov"
+    "report-coverage": "node ./node_modules/nyc/bin/nyc.js npm test && node ./node_modules/nyc/bin/nyc.js report --reporter=text-lcov > coverage.lcov"
   },
   "dependencies": {
     "chalk": "^2.4.1",
