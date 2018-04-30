@@ -25,8 +25,8 @@
     "seed-db": "./node_modules/.bin/sequelize db:seed:all",
     "manage": "node ./bin/manage.js",
     "postinstall": "node ./bin/setup && npm run migrate && npm run seed-db",
-    "lint": "eslint src test",
-    "pretest": "eslint --ignore-path .eslintignore .",
+    "lint": "./node_modules/.bin/eslint --ignore-path .eslintignore .",
+    "pretest": "./node_modules/.bin/eslint --ignore-path .eslintignore .",
     "test": "mocha --reporter spec test/*.js",
     "report-coverage": "./node_modules/.bin/nyc npm test && nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
