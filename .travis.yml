@@ -4,6 +4,7 @@ node_js:
   - "stable"
 install:
   - npm install -g codecov
+  - npm install -g eslint
   - npm install -g nyc
 script:
   - npm run report-coverage
