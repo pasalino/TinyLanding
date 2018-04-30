@@ -1,9 +1,10 @@
 language: node_js
 sudo: false
+env:
+  - NODE_ENV='production'
 node_js:
   - "stable"
   - "9"
-  - "8"
 before_install:
   - npm update -q
 #install:
