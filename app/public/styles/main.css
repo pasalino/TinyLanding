@@ -628,6 +628,15 @@ menu li a:hover::before, a:focus::before {
     overflow: hidden;
 }
 
+#contact .button {
+    font-size: 1.5em;
+    border: 1px solid White;
+    padding: 10px;
+    margin-top: 30px;
+    width: 150px;
+    text-align: center;
+}
+
 #contact .col {
     width: 100%;
 }
@@ -654,6 +663,7 @@ menu li a:hover::before, a:focus::before {
     justify-content: center;
     text-align: center;
     flex-direction: column;
+    align-items: center;
 }
 
 #contact .col_left p {
@@ -790,6 +800,7 @@ footer {
 
     #about .text {
         padding-top: 20px;
+        padding-right: 10px;
     }
 
     #about .col_right {
@@ -811,7 +822,7 @@ footer {
     }
 
     #contact .col_right .text {
-        padding-right: 60px;
+
     }
 
     #contact {
@@ -906,6 +917,7 @@ footer {
         display: block;
         margin-left: 20px;
         text-align: left;
+        align-items: left;
     }
 
 }

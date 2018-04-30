@@ -6,7 +6,6 @@ function createSticky() {
         if (pos > 0) sticky.addClass("sticky");
         var win = $(window);
         win.on("scroll", function () {
-            console.log(win.scrollTop());
             if (win.scrollTop() > 0) {
                 sticky.addClass("sticky");
             } else {
@@ -70,7 +69,6 @@ function sendMessage() {
             product: form.find('#product').val(),
         };
 
-        console.log(data);
 
         var error = false;
 

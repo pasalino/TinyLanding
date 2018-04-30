@@ -1,0 +1,13 @@
+language: node_js
+sudo: true
+env:
+  - NODE_ENV='production'
+node_js:
+  - "stable"
+install:
+  - npm install
+  - npm install --only=dev --ignore-scripts
+  - npm install -g codecov --ignore-scripts
+script:
+  - npm run report-coverage
+  - codecov

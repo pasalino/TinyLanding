@@ -1,37 +1,21 @@
 {
   "name": "TinyLanding",
-  "version": "1.0.0",
+  "version": "0.1.0a",
   "description": "Boilerplate for Landing Page",
   "main": "app/index.js",
-  "author": "pasalino - de Simone Pasqualino - pasalino@gmail.com",
-  "license": "MIT",
-  "dependencies": {
-    "compression": "^1.7.2",
-    "console.table": "^0.10.0",
-    "cookie-parser": "^1.4.3",
-    "csurf": "^1.9.0",
-    "debug": "latest",
-    "email-validator": "^1.1.1",
-    "express": "^4.16.3",
-    "express-minify": "^1.0.0",
-    "helmet": "^3.12.0",
-    "html-minifier": "latest",
-    "http-errors": "latest",
-    "jquery": "^3.3.1",
-    "json2csv": "^4.0.2",
-    "morgan": "^1.9.0",
-    "mustache": "latest",
-    "mustache-express": "^1.2.5",
-    "mz": "^2.7.0",
-    "nodemailer": "^4.6.3",
-    "sequelize": "^4.37.4",
-    "serve-favicon": "^2.4.5",
-    "slugify": "^1.2.9",
-    "sqlite3": "^4.0.0"
+  "author": {
+    "name": "Barney Rubble",
+    "email": "pasalino@gmail.com",
+    "url": "https://pasalino.com"
   },
-  "devDependencies": {
-    "nodemon": "^1.17.2",
-    "sequelize-cli": "^4.0.0"
+  "homepage": "https://www.tinylanding.site",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pasalino/TinyLanding"
+  },
+  "license": "MIT",
+  "bin": {
+    "tiny-landing": "./scripts/manage.js"
   },
   "scripts": {
     "start": "node ./app/index.js",
@@ -39,7 +23,50 @@
     "debug-verbose": "DEBUG=* ./node_modules/.bin/nodemon ./app/index.js",
     "migrate": "./node_modules/.bin/sequelize db:migrate",
     "seed-db": "./node_modules/.bin/sequelize db:seed:all",
-    "manage": "node ./scripts/manage.js",
-    "postinstall": "npm run migrate; npm run seed-db"
+    "manage": "node ./bin/manage.js",
+    "postinstall": "node ./bin/setup && npm run migrate && npm run seed-db",
+    "lint": "./node_modules/.bin/eslint --ignore-path .eslintignore .",
+    "pretest": "./node_modules/.bin/eslint --ignore-path .eslintignore .",
+    "test": "./node_modules/.bin/mocha --reporter spec test/*.js",
+    "report-coverage": "./node_modules/.bin/nyc npm test && ./node_modules/.bin/nyc report --reporter=text-lcov > coverage.lcov && codecov -t a489d4b7-ebae-4a71-ae83-f6f171ecace8"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "compression": "^1.7.2",
+    "console.table": "^0.10.0",
+    "cookie-parser": "^1.4.3",
+    "csurf": "^1.9.0",
+    "date-format": "^1.2.0",
+    "debug": "latest",
+    "email-validator": "^1.2.3",
+    "express": "^4.16.3",
+    "express-minify": "^1.0.0",
+    "helmet": "^3.12.0",
+    "html-minifier": "^3.5.15",
+    "http-errors": "latest",
+    "jquery": "^3.3.1",
+    "json2csv": "^4.1.2",
+    "morgan": "^1.9.0",
+    "mustache": "latest",
+    "mustache-express": "^1.2.5",
+    "mz": "^2.7.0",
+    "nodemailer": "^4.6.4",
+    "sequelize": "^4.37.6",
+    "sequelize-cli": "^4.0.0",
+    "serve-favicon": "^2.5.0",
+    "slugify": "^1.2.9",
+    "sqlite3": "^4.0.0",
+    "yargs": "^11.1.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "mocha": "^5.1.1",
+    "nodemon": "^1.17.3",
+    "nyc": "^11.7.1"
   }
 }

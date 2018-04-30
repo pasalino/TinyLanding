@@ -1,16 +1,25 @@
 <!DOCTYPE html>
-<!-- https://color.adobe.com/it/create/color-wheel/?base=2&rule=Complementary&selected=0&name=Il%20mio%20tema%20Color&mode=rgb&rgbvalues=0.11473405741839873,0.7,0.2916278931825006,0.36390579631199815,1,0.5561622312266168,0.2639057963119982,1,0.48638675360080885,0.7,0.05122572069349931,0.044734057418398754,1,0.27119821821060874,0.2639057963119982&swatchOrder=0,1,2,3,4 -->
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!-->
 <html lang="en">
 <!--<![endif]-->
 <head>
-    <title>TinyLanding | Your landing page and leads manager out-of-the-box with Node.js+Express</title>
-
+    <title>TinyLanding | Landing page & leads manager out-of-the-box with Node.js+Express</title>
 
     <link rel="stylesheet" href="/styles/normalize.css"/>
     <link rel="stylesheet" href="/styles/animations.css"/>
     <link rel="stylesheet" href="/styles/main.css"/>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117521562-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-117521562-1');
+    </script>
+
 
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
             integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
@@ -20,6 +29,8 @@
     <script type="text/javascript" src="/scripts/jquery.waypoints.js"></script>
 
     <script type="text/javascript" src="/scripts/main.js"></script>
+
+
 
     <meta charset="UTF-8">
     <meta name="description"
@@ -67,8 +78,7 @@
         <div class="animated bounceIn slideShow_container">
             <h1>Create your<br class="mobile"/>&nbsp;<strong>Landing Page</strong><br/>self-hosted</h1>
             <div class="subtitle">
-                Your landing page and leads manager<br class="mobile"/>&nbsp;<strong>out-of-the-box</strong>&nbsp;<br
-                    class="mobile"/>with Node.js+Express.
+                The easiest way to set up&nbsp;<br class="mobile"/>&nbsp;and manage your landing page with Node.js+Express.
             </div>
             <div class="button"><a href="https://github.com/pasalino/TinyLanding"><i class="fab fa-github"></i>
                 Download</a>
@@ -76,25 +86,23 @@
         </div>
     </div>
 </div>
-<div id="learn-more" class="section_area limited animatedParent animateOnce">
+<div id="learn-more" class="animatedParent animateOnce section_area limited" data-appear-top-offset='-100'>
     <div class="animated fadeInDownShort">
-        <h2>Landing Page<br class="mobile"/> and <br class="mobile"/>Leads Manager</h2>
+        <h2>Landing Page<br class="mobile"/>&nbsp;and&nbsp;<br class="mobile"/>Leads Manager</h2>
         <div class="separator"></div>
         <p>
-            Create you landing page infrastructure in <strong>30 second</strong>.
+            Just <strong>30 second</strong> to create your landing page infrastructure.
         </p>
         <p>
-            TinyLanding is the easy <strong>out-of-the-box</strong> system for
-            store your leads in <strong>sqlite database and manage it</strong>. Use your HTML for create landing and
-            don't worry about
-            anything else.
+            With TinyLanding you can use your HTML to create landing pages and forget about anything else.
+            This <strong>easy-to-use</strong> system to store your leads in <strong>sqlite database</strong> will ease your creation process.
         </p>
         <p>
             TinyLanding is write in Node.js + Express and is <strong>ready to use</strong> for all javascript developer
             in easy way.
         </p>
         <p>
-            Deploy TinyLanding on your server or hosting <strong>without 3th party services</strong>
+            Deploy TinyLanding on your server or host it <strong>without 3rd part services</strong>: it's up to you!
         </p>
     </div>
 
@@ -104,16 +112,16 @@
         <div class="text">
             <h2>Quickstart</h2>
             <div class="separator"></div>
-            TinyLanding is easy to install, rapid to deploy, ready to use.
+            TinyLanding is easy to install, fast to deploy and ready to use.
             <h3>Step 1 - Use yarn or npm to install it</h3>
             <span class="code_area">
                 npm install
             </span>
-            <h3>Step 2 - Run</h3>
+            <h3>Step 2 - Run it!</h3>
             <span class="code_area">
                 npm start
             </span>
-            <h3>Step 3 - Open the browser</h3>
+            <h3>Step 3 - Open in your browser</h3>
             <span class="code_area">
                 http://localhost:3000
             </span>
@@ -154,7 +162,7 @@
             <div class="icon">
                 <div class="fas fa-play"></div>
             </div>
-            Ready to production
+            Ready for production
         </div>
     </div>
     <div class="container  animatedParent animateOnce">
@@ -169,7 +177,7 @@
             <div class="icon">
                 <div class="fas fa-file-code"></div>
             </div>
-            Landing template ready
+            Landing template provided
         </div>
     </div>
 </div>
@@ -185,13 +193,13 @@
             <img src="/img/about.jpg" alt="Pasqualino de Simone">
             <h3>Pasqualino de Simone</h3>
             <p>Creator & maintainer</p>
-            <em>"I love easy way to build value"</em>
+            <em>"I love to discover and spread accessible ways to build value"</em>
             <br/>
-            <a>tartarugamaori.it</a>
+            <a href="https://pasalino.com" target="_blank">pasalino.com</a>
             <div class="social">
                 <a href="https://github.com/pasalino" target="_blank"><i class="fab fa-github-alt"></i></a>
                 <a href="https://it.linkedin.com/in/pasalino" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://twitter.com/tartarugamaori" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://twitter.com/pasa_lino" target="_blank"><i class="fab fa-twitter"></i></a>
                 <a href="mailto:pasalino@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
@@ -203,11 +211,13 @@
             <div class="image">
                 <img src="/img/logo.png" id="logo" alt="logo">
             </div>
-
+            <div class="button"><a href="https://github.com/pasalino/TinyLanding"><i class="fab fa-github"></i>
+                Download</a>
+            </div>
             <p>TinyLanding your Landing Page system for catch leads.
-                <br/>TinyLanding is free software under MIT licence.
-                <br/>You can use this software for commercial and personal use whitout limits.
-                <br/>No responsibility for the use of this solution is assumed
+                <br/>TinyLanding is a free software developed under MIT license.
+                <br/>You can use this software for commercial and personal use without limits.
+                <br/>TinyLanding is not responsible for the inappropriate use of the solution.
             </p>
         </div>
     </div>
@@ -225,15 +235,6 @@
 </footer>
 <script type="text/javascript" src="/scripts/css3-animate-it.js"></script>
 <script type="text/javascript" src="/scripts/parallax.js"></script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117521562-1"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-117521562-1');
-</script>
 
 </body>
 
