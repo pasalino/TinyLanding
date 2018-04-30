@@ -1,10 +1,12 @@
 language: node_js
-sudo: false
+sudo: true
 env:
   - NODE_ENV='production'
 node_js:
   - "stable"
 install:
+  - npm install
+  - npm install --only=dev
   - npm install -g codecov
 script:
   - npm run report-coverage
