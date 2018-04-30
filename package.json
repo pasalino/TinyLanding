@@ -28,11 +28,10 @@
     "lint": "./node_modules/.bin/eslint --ignore-path .eslintignore .",
     "pretest": "./node_modules/.bin/eslint --ignore-path .eslintignore .",
     "test": "mocha --reporter spec test/*.js",
-    "report-coverage": "./node_modules/.bin/nyc npm test && nyc report --reporter=text-lcov > coverage.lcov && codecov"
+    "report-coverage": "./node_modules/.bin/nyc npm test && nyc report --reporter=text-lcov > coverage.lcov"
   },
   "dependencies": {
     "chalk": "^2.4.1",
-    "codecov": "^3.0.1",
     "compression": "^1.7.2",
     "console.table": "^0.10.0",
     "cookie-parser": "^1.4.3",
@@ -59,6 +58,7 @@
     "yargs": "^11.0.0"
   },
   "devDependencies": {
+    "codecov": "^3.0.1",
     "chai": "^4.1.2",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
