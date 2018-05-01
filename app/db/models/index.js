@@ -12,8 +12,6 @@ const { Op } = Sequelize;
 config.operatorsAliases = Op;
 let sequelize = null;
 
-config.storage = path.resolve(__dirname, '../../data/', config.storage);
-
 sequelize = new Sequelize(config);
 
 fs.readdirSync(__dirname)

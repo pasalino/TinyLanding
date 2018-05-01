@@ -12,6 +12,20 @@
       "acquire": 60000
     }
   },
+  "test": {
+    "dialect": "sqlite",
+    "logging": false,
+    "storage": "app/data/test.sqlite",
+    "freezeTableName": true,
+    "sync": {
+      "force": true
+    },
+    "pool": {
+      "max": 5,
+      "idle": 30000,
+      "acquire": 60000
+    }
+  },
   "production": {
     "dialect": "sqlite",
     "logging": false,
