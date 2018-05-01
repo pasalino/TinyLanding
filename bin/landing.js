@@ -22,7 +22,6 @@ module.exports =
 {
   landingList: async (args) => {
     const { hash, order } = args;
-    console.log(args);
 
     let orderingColumns;
     switch (order) {

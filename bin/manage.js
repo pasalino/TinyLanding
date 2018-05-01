@@ -1,14 +1,13 @@
 #!/usr/bin/env node
 
-if (!process.env.NODE_ENV) {
-  process.env.NODE_ENV = 'production';
-}
+if (!process.env.NODE_ENV) process.env.NODE_ENV = 'production';
 
 const chalk = require('chalk');
 const { landingList, landingAdd } = require('./landing');
 const leads = require('./leads');
 
-const yargs = require('yargs').usage(chalk.underline(`Manage landing and leads in ${chalk.bold('TinyLanging')}`))
+const yargs = require('yargs')
+  .usage(chalk.underline(`Manage landing and leads in ${chalk.bold('TinyLanging')}`))
   .showHelpOnFail(true)
   .help(
     'help',
@@ -88,6 +87,6 @@ const yargs = require('yargs').usage(chalk.underline(`Manage landing and leads i
 const commands = yargs.getCommandInstance().getCommands();
 const { argv } = yargs;
 if (!argv._[0] || commands.indexOf(argv._[0]) === -1) {
-  console.log(`\n${chalk.bgRed(' You need at least one command before moving on ')}\n`);
+  console.error(`\n${chalk.bgRed(' You need at least one command before moving on ')}\n`);
   process.exit(1);
 }
