@@ -1,15 +1,21 @@
 /* eslint-env mocha */
 
 // const { Server } = require('mock-socket');
+require('./fixtures');
 const { execSync, exec } = require('child_process');
-const { expect } = require('chai');
-const { describe, it } = require('mocha');
+const chai = require('chai');
 const sinon = require('sinon');
+const { describe, it } = require('mocha');
+
+
+const { expect } = chai;
+chai.should();
+chai.use(require('chai-things'));
 
 const { landingList } = require('../bin/landing');
 
 describe('Cli Console', () => {
-  describe('Manage CLI', () => {
+  describe('Manage CLI output', () => {
     it('should show help with error when ask manage without parameters', async (done) => {
       try {
         execSync('NODE_ENV=test node ./bin/manage.js');
@@ -55,13 +61,91 @@ describe('Cli Console', () => {
     });
   });
   describe('Listing Landing Page', () => {
-    it('should show list on console without hash', async () => {
+    it('should show list on console without hash when use command without parameters', async () => {
       const consoleTable = sinon.spy(console, 'table');
       const consoleLog = sinon.spy(console, 'log');
-      await landingList({ hash: true, order: 'aaa' });
+      await landingList({ hash: false });
       expect(consoleLog.callCount).to.equal(1);
       const tableResult = consoleTable.args[0];
       expect(tableResult).to.not.have.property('Hash');
+      /* eslint-disable no-console */
+      console.table.restore();
+      console.log.restore();
+      /* eslint-enable no-console */
+    });
+    it('should show list on console with hash column when use hash parameter', async () => {
+      const consoleTable = sinon.spy(console, 'table');
+      const consoleLog = sinon.spy(console, 'log');
+      await landingList({ hash: true });
+      expect(consoleLog.callCount).to.equal(1);
+      const tableResult = consoleTable.args[0][0];
+      expect(tableResult).all.have.property('Hash');
+      /* eslint-disable no-console */
+      console.table.restore();
+      console.log.restore();
+      /* eslint-enable no-console */
+    });
+  });
+  describe('Landing List command', () => {
+    it('given no parameters should return object when called', async () => {
+      const result = await landingList();
+      expect(result).to.be.a('Array');
+      expect(result).all.have.property('Name');
+      expect(result).all.have.property('Slug');
+      expect(result).all.have.property('Created');
+      expect(result).all.have.property('Leads');
+      expect(result).all.not.have.property('Hash');
+    });
+    it('given hash false should return object when called', async () => {
+      const result = await landingList();
+      expect(result).to.be.a('Array');
+      expect(result).all.have.property('Name');
+      expect(result).all.have.property('Slug');
+      expect(result).all.have.property('Created');
+      expect(result).all.have.property('Leads');
+      expect(result).all.not.have.property('Hash');
+    });
+    it('given hash true should return object when called', async () => {
+      const result = await landingList({ hash: true });
+      expect(result).to.be.a('Array');
+      expect(result).all.have.property('Name');
+      expect(result).all.have.property('Slug');
+      expect(result).all.have.property('Created');
+      expect(result).all.have.property('Leads');
+      expect(result).all.have.property('Hash');
+    });
+
+    it('given order name should return object when called', async () => {
+      const result = await landingList({ order: 'name' });
+      expect(result).to.be.a('Array');
+    });
+
+    it('given order created should return object when called', async () => {
+      const result = await landingList({ order: 'name' });
+      expect(result).to.be.a('Array');
+    });
+
+    it('given order leads should return object when called', async () => {
+      const result = await landingList({ order: 'leads' });
+      expect(result).to.be.a('Array');
+    });
+
+    it('given order null should throw error when called', async (done) => {
+      landingList({ order: null }).then(data => done(data)).error(done());
+    });
+
+    it('given order ee should throw error when called', async (done) => {
+      landingList({ order: 'ee' }).then(data => done(data)).error(done());
+    });
+
+    it('given all parameters should return object when called', async () => {
+      const result = await landingList({ hash: true, order: 'name' });
+      expect(result).to.be.a('Array');
+      expect(result).all.have.property('Name');
+      expect(result).all.have.property('Slug');
+      expect(result).all.have.property('Created');
+      expect(result).all.have.property('Leads');
+      expect(result).all.have.property('Hash');
     });
   });
 });

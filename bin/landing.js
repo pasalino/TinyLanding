@@ -17,11 +17,14 @@ const slugifyWithCheckDb = async (name, verbose, baseSlug = null, index = 0) => 
   return newSlug;
 };
 
+const landingListDefaultParams = { hash: false, order: 'created' };
 
 module.exports =
 {
+  landingListDefaultParams,
+
   landingList: async (args) => {
-    const { hash, order } = args;
+    const { hash, order } = { ...landingListDefaultParams, ...args };
 
     let orderingColumns;
     switch (order) {
@@ -31,9 +34,11 @@ module.exports =
       case 'leads':
         orderingColumns = [db.Sequelize.literal('leads_count'), 'DESC'];
         break;
-      default:
+      case 'created':
         orderingColumns = ['createdAt', 'DESC'];
         break;
+      default:
+        throw new Error('Order parameter is not valid');
     }
 
     const products = await db.Product.findAll({
@@ -60,6 +65,7 @@ module.exports =
     }));
 
     console.table(productList);
+    return productList;
   },
 
   landingAdd: async (args) => {
