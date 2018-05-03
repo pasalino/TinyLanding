@@ -17,11 +17,14 @@ const slugifyWithCheckDb = async (name, verbose, baseSlug = null, index = 0) => 
   return newSlug;
 };
 
+const landingListDefaultParams = { hash: false, order: 'created' };
 
 module.exports =
 {
+  landingListDefaultParams,
+
   landingList: async (args) => {
-    const { hash, order } = args;
+    const { hash, order } = { ...landingListDefaultParams, ...args };
 
     let orderingColumns;
     switch (order) {
@@ -60,6 +63,7 @@ module.exports =
     }));
 
     console.table(productList);
+    return productList;
   },
 
   landingAdd: async (args) => {

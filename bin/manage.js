@@ -3,7 +3,7 @@
 if (!process.env.NODE_ENV) process.env.NODE_ENV = 'production';
 
 const chalk = require('chalk');
-const { landingList, landingAdd } = require('./landing');
+const { landingList, landingAdd, landingListDefaultParams } = require('./landing');
 const leads = require('./leads');
 
 const yargs = require('yargs')
@@ -17,12 +17,14 @@ const yargs = require('yargs')
     args
       .option('hash', {
         describe: 'Show Hash in result table',
+        default: landingListDefaultParams.hash,
         type: 'boolean',
       })
       .option('order', {
         alias: 'o',
         describe: 'Ordering column',
         default: 'created',
+        default: landingListDefaultParams.order,
         choices: ['name', 'created', 'leads'],
       })
       .strict();
