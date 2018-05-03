@@ -23,7 +23,6 @@ const yargs = require('yargs')
       .option('order', {
         alias: 'o',
         describe: 'Ordering column',
-        default: 'created',
         default: landingListDefaultParams.order,
         choices: ['name', 'created', 'leads'],
       })
