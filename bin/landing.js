@@ -34,9 +34,11 @@ module.exports =
       case 'leads':
         orderingColumns = [db.Sequelize.literal('leads_count'), 'DESC'];
         break;
-      default:
+      case 'created':
         orderingColumns = ['createdAt', 'DESC'];
         break;
+      default:
+        throw new Error('Order parameter is not valid');
     }
 
     const products = await db.Product.findAll({
