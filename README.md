@@ -9,9 +9,9 @@
 [![codecov](https://codecov.io/gh/pasalino/TinyLanding/branch/master/graph/badge.svg)](https://codecov.io/gh/pasalino/TinyLanding)
 [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/1809/badge)](https://bestpractices.coreinfrastructure.org/projects/1809)
 
-Your landing page and leads manager **out-of-the-box** with Node.js+Express.
+Your multi landing page and leads manager **out-of-the-box** with Node.js+Express.
 
-Create you landing page infrastructure in **30 second**. TinyLanding is the easy out-of-the-box system for store **your leads in sqlite database** and manage it. Use your HTML for create landing and don't worry about anything else. TinyLanding is write in Node.js + Express and is ready to use for all javascript developer in easy way.
+Create you landing page system infrastructure in **30 second**. TinyLanding is the easy out-of-the-box system for store **your leads in sqlite database** and manage it. Use your HTML for create landing and don't worry about anything else. TinyLanding is write in Node.js + Express and is ready to use for all javascript developer in easy way.
 
 [Demo - tinylanding.site](http://tinylanding.site)
 
@@ -41,6 +41,7 @@ Create you landing page infrastructure in **30 second**. TinyLanding is the easy
 ## Features
 
 * Create landing page in simple way by HTML and CSS
+* Create multi landing page in one system
 * Out-of-the-box leads system
 * Export leads in CSV
 * Send email to admin each lead form reached
@@ -83,14 +84,14 @@ The system use [mustache](https://mustache.github.io/) view engine system. You u
 
 #### HTML
 
-Change file `app/views/index.mustache` with your HTML for create your personal web page. 
+Change file `app/views/landing_anem/index.mustache` with your HTML for create your personal web page.
 
-* *(Under costruction) Include template form.mustache in landing page*
-* *(Under costruction) Include JQuery and main.js scripts*
-* *(Under costruction) Include main.css*
-* *(Under costruction) Errorfile*
+* *(Under construction) Include template form.mustache in landing page*
+* *(Under construction) Include JQuery and main.js scripts*
+* *(Under construction) Include main.css*
+* *(Under construction) Errorfile*
 
-In `app/public` folder there is all public asset for landing. This file is reached from root url. In this folder you include all CSS, scripts, images, other assets used in your landing.
+In `app/public/landing_name` folder there is all public asset for landing. This file is reached from root url. In this folder you include all CSS, scripts, images, other assets used in your landing.
 
 #### Mail Template
 
@@ -108,9 +109,11 @@ For running the system use `npm start` command.
 
 TinyLanding use out-of-the-box system for store leads in db. The only choose at moment is use Sqlite db. For read all leads stored you can use script manager.
 
-Use `npm run leads` for show all leads stored in db.
+Use `bin/manage.js` for mange landing and leads
 
-Use `npm run leads2csv path_to_save` for save all leads in CSV format.
+* *(Under construction)*
+
+Use `bin/manage.js --help` to show commands list
 
 ## Deployment
 
@@ -144,7 +147,6 @@ You can use docker-compose for run TinyLanding in production
 ## Roadmap
 
 * Istruction for create PM2 Services
-* System for multiple landing page in one 
 * Provisioning on Heroku
 * Documentation for edit template
 * Documentation for run in docker

@@ -4,7 +4,7 @@ const db = require('../app/db/models/index');
 require('console.table');
 const chalk = require('chalk');
 const format = require('date-format');
-const fs = require('mz/fs');
+const fs = require('fs-extra');
 const Json2csvParser = require('json2csv').Parser;
 
 module.exports = async (args) => {
@@ -42,20 +42,20 @@ module.exports = async (args) => {
     message = `⚠️ No landing with id ${id}`;
   }
 
-  const product = (await db.Product.findOne({ where, order: [['id']] }));
-  if (product === null) {
+  const landing = (await db.LandingPage.findOne({ where, order: [['id']] }));
+  if (landing === null) {
     console.log(chalk.yellow(message));
     return;
   }
 
   const leads = await db.Lead.findAll({
-    where: { ProductId: product.id },
+    where: { LandingPageId: landing.id },
     order: [orderColumn],
     ...limit !== -1 && { limit },
   });
 
   if (leads.length === 0) {
-    console.log(chalk.yellow(`⚠️ No leads for landing ${product.name}`));
+    console.log(chalk.yellow(`⚠️ No leads for landing ${landing.name}`));
   }
   const leadsTable = leads.map(item => ({
     Created: format.asString('dd-MM-yyyy hh:mm', item.createdAt),
@@ -78,7 +78,7 @@ module.exports = async (args) => {
       console.error(chalk.red(err));
     }
   } else {
-    console.log(chalk.bold(chalk.underline(`\nLeads for ${product.name} landing page`.toUpperCase())));
+    console.log(chalk.bold(chalk.underline(`\nLeads for ${landing.name} landing page`.toUpperCase())));
     console.table(leadsTable);
   }
 };

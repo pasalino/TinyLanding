@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
-  const Product = sequelize.define(
-    'Product', {
+  const LandingPage = sequelize.define(
+    'LandingPage', {
       name: {
         type: DataTypes.STRING(50),
         allowNull: false,
@@ -26,14 +26,14 @@ module.exports = (sequelize, DataTypes) => {
     }
     ,
     {
-      tableName: 'Products',
+      tableName: 'LandingPages',
     },
   );
-  Product.associate = (models) => {
-    Product.hasMany(models.Lead, {
-      foreignKey: 'ProductId',
+  LandingPage.associate = (models) => {
+    LandingPage.hasMany(models.Lead, {
+      foreignKey: 'LandingPageId',
       onDelete: 'CASCADE',
     });
   };
-  return Product;
+  return LandingPage;
 };

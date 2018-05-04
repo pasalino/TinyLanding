@@ -28,6 +28,7 @@ module.exports = {
       next(createError(404, 'Error 404 not found'));
     });
 
+    // eslint-disable-next-line no-unused-vars
     app.use((err, req, res, next) => {
       const contType = req.headers['content-type'];
 
@@ -58,7 +59,6 @@ module.exports = {
       res.locals.message = errP.message;
       res.locals.error = !isProduction ? errP : {};
       res.render('error');
-      next();
     });
   },
 };

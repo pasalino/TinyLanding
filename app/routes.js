@@ -5,5 +5,6 @@ const landingApiController = require('./controllers/landingApiController');
 module.exports = (app) => {
   const csrf = CsrfToken(app);
   app.route('/').get(csrf, landingController.index);
-  app.route('/leads').post(csrf, landingApiController.leadsPost);
+  app.route('/:slug').get(csrf, landingController.index);
+  app.route('/api/v1/leads').post(csrf, landingApiController.leadsPost);
 };

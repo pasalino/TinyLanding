@@ -6,5 +6,7 @@ app/data/*
 app/data/logs/*
 app/data/cache/*
 app/config/email.json
+app/public/*
+app/views/*
 .nyc_output
 coverage.lcov

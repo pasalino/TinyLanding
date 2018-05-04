@@ -22,9 +22,8 @@
     "debug": "DEBUG=TinyLanding* ./node_modules/.bin/nodemon ./app/index.js",
     "debug-verbose": "DEBUG=* ./node_modules/.bin/nodemon ./app/index.js",
     "migrate": "./node_modules/.bin/sequelize db:migrate",
-    "seed-db": "./node_modules/.bin/sequelize db:seed:all",
     "manage": "node ./bin/manage.js",
-    "postinstall": "node ./bin/setup && npm run migrate && npm run seed-db",
+    "postinstall": "npm run migrate && node ./bin/setup",
     "lint": "./node_modules/.bin/eslint --ignore-path .eslintignore .",
     "pretest": "NODE_ENV=test ./node_modules/.bin/eslint --ignore-path .eslintignore .",
     "test": "NODE_ENV=test ./node_modules/.bin/mocha --reporter spec test/*.js",
@@ -49,14 +48,14 @@
     "morgan": "^1.9.0",
     "mustache": "latest",
     "mustache-express": "^1.2.5",
-    "mz": "^2.7.0",
+    "node-fs-extra": "^0.8.2",
     "nodemailer": "^4.6.4",
     "sequelize": "^4.37.6",
     "sequelize-cli": "^4.0.0",
-    "serve-favicon": "^2.5.0",
     "slugify": "^1.2.9",
     "sqlite3": "^4.0.0",
-    "yargs": "^11.1.0"
+    "yargs": "^11.1.0",
+    "fs-extra": "latest"
   },
   "devDependencies": {
     "chai": "^4.1.2",
@@ -69,6 +68,7 @@
     "mocha": "^5.1.1",
     "nodemon": "^1.17.3",
     "nyc": "^11.7.1",
-    "sinon": "^5.0.2"
+    "sinon": "^5.0.2",
+    "chai-fs": "latest"
   }
 }

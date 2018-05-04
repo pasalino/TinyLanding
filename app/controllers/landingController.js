@@ -1,7 +1,24 @@
+const db = require('../db/models');
+
 const index = async (req, res, next) => {
   try {
-    const context = { csrfToken: req.csrfToken(), product_hash: '4870de00-3512-11e8-a612-5b7cd30edbfc' };
-    res.render('index', context);
+    let { slug } = req.params;
+    if (!slug) {
+      slug = 'tiny-landing';
+    }
+    const landing = await db.LandingPage.findOne({ where: { slug } });
+    if (!landing) {
+      const error = new Error('Landing not found');
+      error.status = 404;
+      next(error);
+      return;
+    }
+    const context = {
+      csrfToken: req.csrfToken(),
+      landingHash: landing.hash,
+      landingSlug: landing.slug,
+    };
+    res.render(`${slug}/index`, context);
   } catch (err) {
     next(err);
   }

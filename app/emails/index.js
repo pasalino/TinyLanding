@@ -1,6 +1,7 @@
 const nodeMailer = require('nodemailer');
 const mustache = require('mustache');
-const fs = require('mz/fs');
+const fs = require('fs-extra');
+const path = require('path');
 
 const { debugError, debugInfo } = require('../middlewares/logs');
 
@@ -39,7 +40,8 @@ const sendMail = async (to, subject, text, html) => {
 
 const sendMailFromTemplate = async (to, subject, template, context) => {
   try {
-    const content = await fs.readFile(`${__dirname}/templates/${template}.mustache`);
+    const pathEmail = path.join(__dirname, '../', 'views', template, 'emails/lead.mustache');
+    const content = await fs.readFile(pathEmail);
     const html = mustache.to_html(content.toString(), context);
     await sendMail(to, subject, null, html);
   } catch (err) {

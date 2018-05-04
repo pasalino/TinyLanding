@@ -20,7 +20,7 @@
     },
     "from_name": "Pasqualino de Simone",
     "from_mail": "xxx@google.it"
-  }
+  },
   "production": {
     "host": "smtp.google.it",
     "port": 465,
