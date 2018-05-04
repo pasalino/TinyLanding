@@ -32,7 +32,7 @@ module.exports =
         orderingColumns = ['name', 'ASC'];
         break;
       case 'leads':
-        orderingColumns = [db.Sequelize.literal('leads_count'), 'DESC'];
+        orderingColumns = [db.Sequelize.literal('leadsCount'), 'DESC'];
         break;
       case 'created':
         orderingColumns = ['createdAt', 'DESC'];
