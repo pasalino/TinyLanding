@@ -3,7 +3,9 @@
 if (!process.env.NODE_ENV) process.env.NODE_ENV = 'production';
 
 const chalk = require('chalk');
-const { landingList, landingAdd, landingListDefaultParams } = require('./landing');
+const {
+  landingList, landingAdd, landingRemove, landingListDefaultParams,
+} = require('./landing');
 const leads = require('./leads');
 
 const yargs = require('yargs')
@@ -44,6 +46,21 @@ const yargs = require('yargs')
       .strict()
       .demandOption(['name']);
   }, landingAdd)
+  .command('remove-landing [name]', 'Remove landing page', (args) => {
+    args
+      .option('name', {
+        alias: 'n',
+        describe: 'Name of landing page',
+      })
+      .option('slug', {
+        describe: 'Slug of landing page',
+      })
+      .option('id', {
+        alias: 'verbose',
+        describe: 'Id of landing page',
+      })
+      .strict();
+  }, landingRemove)
   .command('leads', 'Show leads for landing page', (args) => {
     args
       .option('name', {

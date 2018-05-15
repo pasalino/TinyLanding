@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   Lead.associate = (models) => {
-    Lead.belongsTo(models.Product, {
+    Lead.belongsTo(models.LandingPage, {
       foreignKey: 'id',
       onDelete: 'CASCADE',
     });

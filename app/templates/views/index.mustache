@@ -6,9 +6,9 @@
 <head>
     <title>TinyLanding | Landing page & leads manager out-of-the-box with Node.js+Express</title>
 
-    <link rel="stylesheet" href="/styles/normalize.css"/>
-    <link rel="stylesheet" href="/styles/animations.css"/>
-    <link rel="stylesheet" href="/styles/main.css"/>
+    <link rel="stylesheet" href="/{{landingSlug}}/styles/normalize.css"/>
+    <link rel="stylesheet" href="/{{landingSlug}}/styles/animations.css"/>
+    <link rel="stylesheet" href="/{{landingSlug}}/styles/main.css"/>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117521562-1"></script>
@@ -25,10 +25,10 @@
             integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
             crossorigin="anonymous"></script>
     <script type="text/javascript" src="/jquery/jquery.js"></script>
-    <script type="text/javascript" src="/scripts/modernizr-3.5.0.min.js"></script>
-    <script type="text/javascript" src="/scripts/jquery.waypoints.js"></script>
+    <script type="text/javascript" src="/{{landingSlug}}/scripts/modernizr-3.5.0.min.js"></script>
+    <script type="text/javascript" src="/{{landingSlug}}/scripts/jquery.waypoints.js"></script>
 
-    <script type="text/javascript" src="/scripts/main.js"></script>
+    <script type="text/javascript" src="/{{landingSlug}}/scripts/main.js"></script>
 
 
 
@@ -43,7 +43,7 @@
 <header id="header">
     <div id="headerContainer">
         <a href="#slideShow" id="link_logo">
-            <img src="/img/logo.png" id="logo" alt="logo">
+            <img src="/{{landingSlug}}/img/logo.png" id="logo" alt="logo">
         </a>
         <div id="nav-icon">
             <span></span>
@@ -130,7 +130,7 @@
     </div>
     <div class="col_right cols">
         <div class="right parallax-window" data-parallax="scroll" data-iosFix="false" data-androidFix="false"
-             data-image-src="/img/parallax.jpg">
+             data-image-src="/{{landingSlug}}/img/parallax.jpg">
         </div>
     </div>
 </div>
@@ -183,14 +183,14 @@
 </div>
 <div id="about" class="section_area">
     <div class="col_left cols">
-        <div class="right parallax-window" data-parallax="scroll" data-image-src="/img/team.jpeg">
+        <div class="right parallax-window" data-parallax="scroll" data-image-src="/{{landingSlug}}/img/team.jpeg">
         </div>
     </div>
     <div class="col_right cols animatedParent animateOnce">
         <div class="text  fadeInRight animated">
             <h2>About</h2>
             <div class="separator"></div>
-            <img src="/img/about.jpg" alt="Pasqualino de Simone">
+            <img src="/{{landingSlug}}/img/about.jpg" alt="Pasqualino de Simone">
             <h3>Pasqualino de Simone</h3>
             <p>Creator & maintainer</p>
             <em>"I love to discover and spread accessible ways to build value"</em>
@@ -209,7 +209,7 @@
     <div class="col_left cols">
         <div class="text">
             <div class="image">
-                <img src="/img/logo.png" id="logo" alt="logo">
+                <img src="/{{landingSlug}}/img/logo.png" id="logo" alt="logo">
             </div>
             <div class="button"><a href="https://github.com/pasalino/TinyLanding"><i class="fab fa-github"></i>
                 Download</a>
@@ -224,7 +224,7 @@
     <div class="col_right cols">
         <div class="text">
             <h2>Contact Us</h2>
-            {{> form}}
+            {{> {{form}} }}
         </div>
     </div>
 
@@ -233,8 +233,8 @@
     TinyLanding - A landing page system wrote in Node.js+Express
     <a class="wp" id="footer"></a>
 </footer>
-<script type="text/javascript" src="/scripts/css3-animate-it.js"></script>
-<script type="text/javascript" src="/scripts/parallax.js"></script>
+<script type="text/javascript" src="/{{landingSlug}}/scripts/css3-animate-it.js"></script>
+<script type="text/javascript" src="/{{landingSlug}}/scripts/parallax.js"></script>
 
 </body>
 

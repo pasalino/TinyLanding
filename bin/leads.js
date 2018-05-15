@@ -4,7 +4,7 @@ const db = require('../app/db/models/index');
 require('console.table');
 const chalk = require('chalk');
 const format = require('date-format');
-const fs = require('mz/fs');
+const fs = require('fs-extra');
 const Json2csvParser = require('json2csv').Parser;
 
 module.exports = async (args) => {

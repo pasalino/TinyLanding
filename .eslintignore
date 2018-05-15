@@ -7,3 +7,6 @@ app/data/cache/*
 app/config/email.json
 
 app/public/scripts
+app/templates/scripts/*
+app/templates/views
+app/templates/styles/*

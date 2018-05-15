@@ -31,11 +31,11 @@ module.exports = {
     company: {
       type: Sequelize.STRING(400),
     },
-    ProductId: {
+    LandingPageId: {
       type: Sequelize.INTEGER,
       onDelete: 'CASCADE',
       references: {
-        model: 'Products',
+        model: 'LandingPages',
         key: 'id',
       },
     },

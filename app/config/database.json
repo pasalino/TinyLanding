@@ -2,7 +2,6 @@
   "development": {
     "dialect": "sqlite",
     "storage": "app/data/data.sqlite",
-    "freezeTableName": true,
     "sync": {
       "force": true
     },
@@ -10,6 +9,11 @@
       "max": 5,
       "idle": 30000,
       "acquire": 60000
+    },
+    "define":{
+      "timestamps":true,
+      "freezeTableName": true,
+      "underscored": false
     }
   },
   "test": {
@@ -24,6 +28,11 @@
       "max": 5,
       "idle": 30000,
       "acquire": 60000
+    },
+    "define":{
+      "timestamps":true,
+      "freezeTableName": true,
+      "underscored": false
     }
   },
   "production": {
@@ -38,6 +47,11 @@
       "max": 5,
       "idle": 30000,
       "acquire": 60000
+    },
+    "define":{
+      "timestamps":true,
+      "freezeTableName": true,
+      "underscored": false
     }
   }
 }

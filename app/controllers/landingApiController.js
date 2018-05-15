@@ -19,25 +19,25 @@ const leadsPost = async (req, res, next) => {
     return next(new Error('Email is invalid'));
   }
 
-  let product = null;
+  let landing = null;
   try {
-    product = await db.Product.findOne({ where: { hash: data.product } });
-    debugInfo(`Product id ${product.id}`);
+    landing = await db.LandingPage.findOne({ where: { hash: data.landing } });
+    debugInfo(`Landing page id ${landing.id}`);
   } catch (e) {
     debugError(e);
-    return next(new Error('Product is not exists'));
+    return next(new Error('Landing does not exists'));
   }
 
   try {
-    delete data.product;
-    data.ProductId = product.id;
+    delete data.landing;
+    data.LandingPageId = landing.id;
     await db.Lead.create(data);
   } catch (e) {
     debugError(e);
-    return next(new Error('error in create lead'));
+    return next(new Error('Error in create lead'));
   }
 
-  sendMailFromTemplate(data.email, `Lead from ${product.name} landing`, 'lead', data).catch(e => debugError(e));
+  sendMailFromTemplate(data.email, `Lead from ${landing.name} landing`, landing.slug, data).catch(e => debugError(e));
 
 
   const response = { status: 200, success: 'Lead created correctly' };
