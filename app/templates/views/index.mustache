@@ -4,234 +4,256 @@
 <html lang="en">
 <!--<![endif]-->
 <head>
-    <title>TinyLanding | Landing page & leads manager out-of-the-box with Node.js+Express</title>
+  <title>TinyLanding | Landing page & leads manager out-of-the-box with Node.js+Express</title>
 
-    <link rel="stylesheet" href="/{{landingSlug}}/styles/normalize.css"/>
-    <link rel="stylesheet" href="/{{landingSlug}}/styles/animations.css"/>
-    <link rel="stylesheet" href="/{{landingSlug}}/styles/main.css"/>
+  <link rel="stylesheet" href="/{{landingSlug}}/styles/normalize.css"/>
+  <link rel="stylesheet" href="/{{landingSlug}}/styles/animations.css"/>
+  <link rel="stylesheet" href="/{{landingSlug}}/styles/main.css"/>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117521562-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117521562-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-        gtag('config', 'UA-117521562-1');
-    </script>
+    function gtag() {
+      dataLayer.push(arguments);
+    }
 
+    gtag('js', new Date());
 
-    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
-            integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
-            crossorigin="anonymous"></script>
-    <script type="text/javascript" src="/jquery/jquery.js"></script>
-    <script type="text/javascript" src="/{{landingSlug}}/scripts/modernizr-3.5.0.min.js"></script>
-    <script type="text/javascript" src="/{{landingSlug}}/scripts/jquery.waypoints.js"></script>
-
-    <script type="text/javascript" src="/{{landingSlug}}/scripts/main.js"></script>
+    gtag('config', 'UA-117521562-1');
+  </script>
 
 
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
+          integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
+          crossorigin="anonymous"></script>
+  <script type="text/javascript" src="/jquery/jquery.js"></script>
+  <script type="text/javascript" src="/{{landingSlug}}/scripts/modernizr-3.5.0.min.js"></script>
+  <script type="text/javascript" src="/{{landingSlug}}/scripts/jquery.waypoints.js"></script>
 
-    <meta charset="UTF-8">
-    <meta name="description"
-          content="Create you landing page infrastructure in 30 second. TinyLanding is the easy out-of-the-box system for store your leads in database and manage it. Use your HTML for create landing and don't worry about anything else.">
-    <meta name="author" content="Pasqualino de Simone (pasalino)">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="/{{landingSlug}}/scripts/main.js"></script>
+
+
+  <meta charset="UTF-8">
+  <meta name="description"
+        content="Create you landing page infrastructure in 30 second. TinyLanding is the easy out-of-the-box system for store your leads in database and manage it. Use your HTML for create landing and don't worry about anything else.">
+  <meta name="author" content="Pasqualino de Simone (pasalino)">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 <a class="wp" id="home"></a>
 <header id="header">
-    <div id="headerContainer">
-        <a href="#slideShow" id="link_logo">
-            <img src="/{{landingSlug}}/img/logo.png" id="logo" alt="logo">
-        </a>
-        <div id="nav-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <menu>
-            <li class="title">
-                <h2>Menu</h2>
-            </li>
-            <li>
-                <a href="#learn-more">Learn More</a>
-            </li>
-            <li>
-                <a href="#quick-start">Quick Start</a>
-            </li>
-            <li>
-                <a href="#features">Features</a>
-            </li>
-            <li>
-                <a href="#about">About</a>
-            </li>
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
-        </menu>
+  <div id="headerContainer">
+    <a href="#slideShow" id="link_logo">
+      <img src="/{{landingSlug}}/img/logo.png" id="logo" alt="logo">
+    </a>
+    <div id="nav-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
+    <menu>
+      <li class="title">
+        <h2>Menu</h2>
+      </li>
+      <li>
+        <a href="#learn-more">Learn More</a>
+      </li>
+      <li>
+        <a href="#quick-start">Quick Start</a>
+      </li>
+      <li>
+        <a href="#features">Features</a>
+      </li>
+      <li>
+        <a href="#about">About</a>
+      </li>
+      <li>
+        <a href="#contact">Contact</a>
+      </li>
+    </menu>
+  </div>
 </header>
 <div id="slideShow">
-    <div class="animatedParent animateOnce">
-        <div class="animated bounceIn slideShow_container">
-            <h1>Create your<br class="mobile"/>&nbsp;<strong>Landing Page</strong><br/>self-hosted</h1>
-            <div class="subtitle">
-                The easiest way to set up&nbsp;<br class="mobile"/>&nbsp;and manage your landing page with Node.js+Express.
-            </div>
-            <div class="button"><a href="https://github.com/pasalino/TinyLanding"><i class="fab fa-github"></i>
-                Download</a>
-            </div>
-        </div>
+  <div class="animatedParent animateOnce">
+    <div class="animated bounceIn slideShow_container">
+      <h1>Create your<br class="mobile"/>&nbsp;<strong>Landing Page</strong><br/>self-hosted</h1>
+      <div class="subtitle">
+        The easiest way to set up&nbsp;<br class="mobile"/>&nbsp;and manage your landings page with Node.js+Express.
+      </div>
+      <div class="button"><a href="https://github.com/pasalino/TinyLanding"><i class="fab fa-github"></i>
+        Download</a>
+      </div>
     </div>
+  </div>
 </div>
 <div id="learn-more" class="animatedParent animateOnce section_area limited" data-appear-top-offset='-100'>
-    <div class="animated fadeInDownShort">
-        <h2>Landing Page<br class="mobile"/>&nbsp;and&nbsp;<br class="mobile"/>Leads Manager</h2>
-        <div class="separator"></div>
-        <p>
-            Just <strong>30 second</strong> to create your landing page infrastructure.
-        </p>
-        <p>
-            With TinyLanding you can use your HTML to create landing pages and forget about anything else.
-            This <strong>easy-to-use</strong> system to store your leads in <strong>sqlite database</strong> will ease your creation process.
-        </p>
-        <p>
-            TinyLanding is write in Node.js + Express and is <strong>ready to use</strong> for all javascript developer
-            in easy way.
-        </p>
-        <p>
-            Deploy TinyLanding on your server or host it <strong>without 3rd part services</strong>: it's up to you!
-        </p>
-    </div>
+  <div class="animated fadeInDownShort">
+    <h2>Landings Page<br class="mobile"/>&nbsp;and&nbsp;<br class="mobile"/>Leads Manager</h2>
+    <div class="separator"></div>
+    <p>
+      Just <strong>30 second</strong> to create your landings page infrastructure.
+    </p>
+    <p>
+      With TinyLanding you can use your HTML to create multi landing pages and forget about anything else.
+      This <strong>easy-to-use</strong> system to store your leads in <strong>sqlite database</strong> will ease your
+      creation process.
+    </p>
+    <p>
+      Use one system to create multi landing page using the same infrastructure.
+    </p>
+    <p>
+      TinyLanding is write in Node.js + Express and is <strong>ready to use</strong> for all javascript developer
+      in easy way.
+    </p>
+    <p>
+      Deploy TinyLanding on your server or host it <strong>without 3rd part services</strong>: it's up to you!
+    </p>
+  </div>
 
 </div>
 <div id="quick-start" class="section_area animatedParent animateOnce">
-    <div class="col_left cols animated bounceInLeft">
-        <div class="text">
-            <h2>Quickstart</h2>
-            <div class="separator"></div>
-            TinyLanding is easy to install, fast to deploy and ready to use.
-            <h3>Step 1 - Use yarn or npm to install it</h3>
-            <span class="code_area">
+  <div class="col_left cols animated bounceInLeft">
+    <div class="text">
+      <h2>Quickstart</h2>
+      <div class="separator"></div>
+      TinyLanding is easy to install, fast to deploy and ready to use.
+      <h3>Step 1 - Use yarn or npm to install it</h3>
+      <span class="code_area">
                 npm install
             </span>
-            <h3>Step 2 - Run it!</h3>
-            <span class="code_area">
+      <h3>Step 2 - Run it!</h3>
+      <span class="code_area">
                 npm start
             </span>
-            <h3>Step 3 - Open in your browser</h3>
-            <span class="code_area">
+      <h3>Step 3 - Open in your browser</h3>
+      <span class="code_area">
                 http://localhost:3000
             </span>
-            <p>Enjoy!</p>
-        </div>
+      <p>Enjoy!</p>
     </div>
-    <div class="col_right cols">
-        <div class="right parallax-window" data-parallax="scroll" data-iosFix="false" data-androidFix="false"
-             data-image-src="/{{landingSlug}}/img/parallax.jpg">
-        </div>
+  </div>
+  <div class="col_right cols">
+    <div class="right parallax-window" data-parallax="scroll" data-iosFix="false" data-androidFix="false"
+         data-image-src="/{{landingSlug}}/img/parallax.jpg">
     </div>
+  </div>
 </div>
 <div id="features" class="section_area">
-    <h2>MAIN FEATURES</h2>
-    <div class="separator"></div>
-    <div class="container  animatedParent animateOnce">
-        <div class="box_left box animated fadeInLeft">
-            Self contained system
-            <div class="icon">
-                <div class="fab fa-node-js"></div>
-            </div>
-        </div>
-        <div class="box_right box animated fadeInRight">
-            <div class="icon">
-                <div class="fas fa-table"></div>
-            </div>
-            Export leads in CSV
-        </div>
+  <h2>MAIN FEATURES</h2>
+  <div class="separator"></div>
+  <div class="container  animatedParent animateOnce">
+    <div class="box_left box animated fadeInLeft">
+      Self contained system
+      <div class="icon">
+        <div class="fab fa-node-js"></div>
+      </div>
     </div>
-    <div class="container  animatedParent animateOnce">
-        <div class="box_left box animated fadeInLeft delay-250">
-            Email for each lead form reached
-            <div class="icon">
-                <div class="fas fa-envelope"></div>
-            </div>
-        </div>
-        <div class="box_right box animated fadeInRight delay-250">
-            <div class="icon">
-                <div class="fas fa-play"></div>
-            </div>
-            Ready for production
-        </div>
+    <div class="box_right box animated fadeInRight">
+      <div class="icon">
+        <div class="fas fa-table"></div>
+      </div>
+      Export leads in CSV
     </div>
-    <div class="container  animatedParent animateOnce">
-        <div class="box_left box animated fadeInLeft delay-500">
-            Use HTML+JS+CSS
-            <div class="icon">
-                <div class="fab fa-html5"></div>
-            </div>
-        </div>
+  </div>
+  <div class="container  animatedParent animateOnce">
+    <div class="box_left box animated fadeInLeft delay-250">
+      Email for each lead form reached
+      <div class="icon">
+        <div class="fas fa-envelope"></div>
+      </div>
+    </div>
+    <div class="box_right box animated fadeInRight delay-250">
+      <div class="icon">
+        <div class="fas fa-play"></div>
+      </div>
+      Ready for production
+    </div>
+  </div>
+  <div class="container  animatedParent animateOnce">
+    <div class="box_left box animated fadeInLeft delay-500">
+      Use HTML+JS+CSS
+      <div class="icon">
+        <div class="fab fa-html5"></div>
+      </div>
+    </div>
 
-        <div class="box_right box animated fadeInRight delay-500">
-            <div class="icon">
-                <div class="fas fa-file-code"></div>
-            </div>
-            Landing template provided
-        </div>
+    <div class="box_right box animated fadeInRight delay-500">
+      <div class="icon">
+        <div class="fas fa-file-code"></div>
+      </div>
+      Landing template provided
     </div>
+  </div>
+  <div class="container  animatedParent animateOnce">
+    <div class="box_left box animated fadeInLeft delay-500">
+      Multi Landing Page
+      <div class="icon">
+        <div class="fab fa-copy"></div>
+      </div>
+    </div>
+
+    <div class="box_right box animated fadeInRight delay-500">
+      <div class="icon">
+        <div class="fas fa-terminal"></div>
+      </div>
+      Command line tool
+    </div>
+  </div>
 </div>
 <div id="about" class="section_area">
-    <div class="col_left cols">
-        <div class="right parallax-window" data-parallax="scroll" data-image-src="/{{landingSlug}}/img/team.jpeg">
-        </div>
+  <div class="col_left cols">
+    <div class="right parallax-window" data-parallax="scroll" data-image-src="/{{landingSlug}}/img/team.jpeg">
     </div>
-    <div class="col_right cols animatedParent animateOnce">
-        <div class="text  fadeInRight animated">
-            <h2>About</h2>
-            <div class="separator"></div>
-            <img src="/{{landingSlug}}/img/about.jpg" alt="Pasqualino de Simone">
-            <h3>Pasqualino de Simone</h3>
-            <p>Creator & maintainer</p>
-            <em>"I love to discover and spread accessible ways to build value"</em>
-            <br/>
-            <a href="https://pasalino.com" target="_blank">pasalino.com</a>
-            <div class="social">
-                <a href="https://github.com/pasalino" target="_blank"><i class="fab fa-github-alt"></i></a>
-                <a href="https://it.linkedin.com/in/pasalino" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://twitter.com/pasa_lino" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="mailto:pasalino@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
+  </div>
+  <div class="col_right cols animatedParent animateOnce">
+    <div class="text  fadeInRight animated">
+      <h2>About</h2>
+      <div class="separator"></div>
+      <img src="/{{landingSlug}}/img/about.jpg" alt="Pasqualino de Simone">
+      <h3>Pasqualino de Simone</h3>
+      <p>Creator & maintainer</p>
+      <em>"I love to discover and spread accessible ways to build value"</em>
+      <br/>
+      <a href="https://pasalino.com" target="_blank">pasalino.com</a>
+      <div class="social">
+        <a href="https://github.com/pasalino" target="_blank"><i class="fab fa-github-alt"></i></a>
+        <a href="https://it.linkedin.com/in/pasalino" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://twitter.com/pasa_lino" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="mailto:pasalino@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+      </div>
     </div>
+  </div>
 </div>
 <div id="contact">
-    <div class="col_left cols">
-        <div class="text">
-            <div class="image">
-                <img src="/{{landingSlug}}/img/logo.png" id="logo" alt="logo">
-            </div>
-            <div class="button"><a href="https://github.com/pasalino/TinyLanding"><i class="fab fa-github"></i>
-                Download</a>
-            </div>
-            <p>TinyLanding your Landing Page system for catch leads.
-                <br/>TinyLanding is a free software developed under MIT license.
-                <br/>You can use this software for commercial and personal use without limits.
-                <br/>TinyLanding is not responsible for the inappropriate use of the solution.
-            </p>
-        </div>
+  <div class="col_left cols">
+    <div class="text">
+      <div class="image">
+        <img src="/{{landingSlug}}/img/logo.png" id="logo" alt="logo">
+      </div>
+      <div class="button"><a href="https://github.com/pasalino/TinyLanding"><i class="fab fa-github"></i>
+        Download</a>
+      </div>
+      <p>TinyLanding your Landing Page system for catch leads.
+        <br/>TinyLanding is a free software developed under MIT license.
+        <br/>You can use this software for commercial and personal use without limits.
+        <br/>TinyLanding is not responsible for the inappropriate use of the solution.
+      </p>
     </div>
-    <div class="col_right cols">
-        <div class="text">
-            <h2>Contact Us</h2>
-            {{> {{form}} }}
-        </div>
+  </div>
+  <div class="col_right cols">
+    <div class="text">
+      <h2>Contact Us</h2>
+      {{> {{form}} }}
     </div>
+  </div>
 
 </div>
 <footer>
-    TinyLanding - A landing page system wrote in Node.js+Express
-    <a class="wp" id="footer"></a>
+  TinyLanding - A landing page system wrote in Node.js+Express
+  <a class="wp" id="footer"></a>
 </footer>
 <script type="text/javascript" src="/{{landingSlug}}/scripts/css3-animate-it.js"></script>
 <script type="text/javascript" src="/{{landingSlug}}/scripts/parallax.js"></script>
