@@ -6,7 +6,8 @@ app/data/logs/*
 app/data/cache/*
 app/config/email.json
 
-app/public/scripts
+app/public
+app/public/*
 app/templates/scripts/*
 app/templates/views
 app/templates/styles/*
