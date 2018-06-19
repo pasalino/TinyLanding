@@ -11,7 +11,7 @@
 
 Your multi landing page and leads manager **out-of-the-box** with Node.js+Express.
 
-Create you landing page system infrastructure in **30 second**. TinyLanding is the easy out-of-the-box system for store **your leads in sqlite database** and manage it. Use your HTML for create landing and don't worry about anything else. TinyLanding is write in Node.js + Express and is ready to use for all javascript developer in easy way.
+Create your landing page system infrastructure in **30 seconds**. TinyLanding is the easy out-of-the-box system for storing **your leads in a sqlite database** and manage it. Use only HTML to create your landing page and don't worry about anything else. TinyLanding is written in Node.js + Express and is ready to use for all JavaScript developers.
 
 [Demo - tinylanding.site](http://tinylanding.site)
 
@@ -40,11 +40,11 @@ Create you landing page system infrastructure in **30 second**. TinyLanding is t
 
 ## Features
 
-* Create landing page in simple way by HTML and CSS
-* Create multi landing page in one system
+* Easily create a landing page using HTML and CSS
+* Create multi landing pages in one system
 * Out-of-the-box leads system
 * Export leads in CSV
-* Send email to admin each lead form reached
+* Admin receives an email for each lead form submitted
 * Use CsrfToken for security
 * Compress the output in minified mode
 * Use sqlite
@@ -56,60 +56,58 @@ These instructions will get you a copy of the project up and running on your loc
 Clone this repository to your destination and edit.
 
 ```
-git clone git@github.com:pasalino/TinyLanding.git 
+git clone git@github.com:pasalino/TinyLanding.git
 ```
 
 ### Installing
 
-Use `npn` or `yarn` to install it. Go to project folder, use install command There is post install scripts that runs after install dependences.
+Use `npm` or `yarn` to install. Go to project folder and use the install command. Post-install scripts will run after all dependencies are installed.
 
 ```
-npm install 
+npm install
 ```
 
 ### Setup
 
-After install all dependences, the post-install script crate and execute all migrations on sqlite db.<br/>
-The database file is placed in `app/data` folder. You can change all db connection properties in config file `app/config/database.json`. Use **development** key for use in development and **production** key when you are ready to switch TinyLanding it in production mode.
+The post-install scriptW create and execute all migrations on your Sqlite database.<br/>
+The db file is placed in the `app/data` folder. You can change all db connection properties in the config file at `app/config/database.json`. Use the **development** key in your development environment and the **production** key when you are ready to switch TinyLanding to production mode.
 
-Copy `app/config/email_dist.json` and rename it in `app/config/email.json`. Change all configuration with all yours email configuration. In same way of db config file, use **development** and **production** keys respectively in develop and production mode.
+Copy `app/config/email_dist.json` and rename it to `app/config/email.json`. Edit the default configuration with your email details. Same as for the db config file, use **development** and **production** keys respectively in development and production mode.
 
 > In this version the email password setting isn't crypted. Remember to use an email other than yours or to hide this file from prying eyes.
 
 
 ### Customizing
 
-TinyLanding is the best way for frontender and webdesigner to create in rapid way a landing page in HTML with lead form contact. 
-The system use [mustache](https://mustache.github.io/) view engine system. You use your HTML, css and script directly in mustache file.
+TinyLanding is the best way for frontenders and webdesigners to quickly boot up a HTML landing page with a lead contact form.
+The system use [mustache](https://mustache.github.io/) view engine system. You use your HTML, CSS and scripts directly in the mustache file.
 
 #### HTML
 
-Change file `app/views/landing_anem/index.mustache` with your HTML for create your personal web page.
+Change file `app/views/landing_anem/index.mustache` with your HTML to create your personal web page.
 
 * *(Under construction) Include template form.mustache in landing page*
 * *(Under construction) Include JQuery and main.js scripts*
 * *(Under construction) Include main.css*
 * *(Under construction) Errorfile*
 
-In `app/public/landing_name` folder there is all public asset for landing. This file is reached from root url. In this folder you include all CSS, scripts, images, other assets used in your landing.
+All public assets are in the `app/public/landing_name` folder. This file is reached from the root url. Include all your CSS, scripts, images and other assets in this folder.
 
 #### Mail Template
 
-For each leads form sended, TinyLanding send to admin (configured in email.json) a recap email of lead.
+TinyLanding will send an email to the admin configured in email.json for each lead form submitted. You can personalize the email in `app/templates/lead.mustache`. This file uses the same view engine of HTML: mustaches.
 
-If you want personalized message for this mail, change `app/templates/lead.mustache` file. This file use the same view engine of HTML: mustaches.
+> Remember to use absolute URLs for images and embedded CSS stylesheets for this file.
 
-> Remember to use absolute URL for image and embedded CSS style for this file.
+### Usage
 
-### Using
-
-For running the system use `npm start` command.
+Run the system using the `npm start` command.
 
 ## Manage TinyLanding
 
-TinyLanding use out-of-the-box system for store leads in db. The only choose at moment is use Sqlite db. For read all leads stored you can use script manager.
+TinyLanding uses an out-of-the-box system to store leads in your db. Sqlite is currently the only available db. You can use the script manager to read your leads.
 
-Use `bin/manage.js` for mange landing and leads
+Use `bin/manage.js` to manage your landing page and your leads.
 
 * *(Under construction)*
 
@@ -117,44 +115,44 @@ Use `bin/manage.js --help` to show commands list
 
 ## Deployment
 
-For use TinyLanding in production use this command:
+Use this command to use TinyLanding in production:
 
 `NODE_ENV=production PORT=80 npm start`
 
-In this mode, TinyLanding use optimized settings:
+In production, TinyLanding uses optimized settings:
 
-* Compress with gzip and minify all response
-* Recording error log in `/app/data/log`
-* Using caching system
-* Using standard 80 http port
+* Compress with gzip and minify all responses
+* Record error logs in `/app/data/log`
+* Use caching system
+* Use standard 80 http port
 
-> If you change listen post use different `PORT=[port_number]` argument when run the script.
+> If you want to listen to a different port use `PORT=[port_number]` as an argument when running the script.
 > <br/>
-> Remember to use process manager for production mode e.g. [PM2](http://pm2.keymetrics.io/)<br/>
+> Remember to use a process manager for production mode (e.g. [PM2](http://pm2.keymetrics.io/))<br/>
 > A process manager is a “container” for applications that facilitates deployment, provides high availability, and enables you to manage the application at runtime.
 
 
-### Deploy on Docker (Under Construction) 
+### Deploy on Docker (Under Construction)
 
-You can create docker container:
+You can create a docker container:
 
 1. Build
 
 2. Run
 
-You can use docker-compose for run TinyLanding in production 
+You can use docker-compose to run TinyLanding in production
 
 ## Roadmap
 
-* Istruction for create PM2 Services
+* Istructions for creating PM2 Services
 * Provisioning on Heroku
-* Documentation for edit template
-* Documentation for run in docker
+* Documentation for editing the template
+* Documentation for running in docker
 * Create config system
-* Adding Test
-* Add linter for javascript client-site
-* Add linter for css
-* Add linker for html
+* Add Test
+* Add linter for JavaScript client-site
+* Add linter for CSS
+* Add linker for HTML
 
 ## Maintainers
 
@@ -166,8 +164,8 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [Tags](https://github.com/pasalino/TinyLanding/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [Tags](https://github.com/pasalino/TinyLanding/tags).
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
