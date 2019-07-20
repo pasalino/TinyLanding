@@ -12,7 +12,6 @@ Your multi landing page and leads manager **out-of-the-box** with Node.js+Expres
 
 Create your landing page system infrastructure in **30 seconds**. TinyLanding is the easy out-of-the-box system for storing **your leads in a sqlite database** and manage it. Use only HTML to create your landing page and don't worry about anything else. TinyLanding is written in Node.js + Express and is ready to use for all JavaScript developers.
 
-[Demo - tinylanding.site](http://tinylanding.site)
 
 ## Table Of Contents
 
