@@ -50,7 +50,7 @@
     "mustache-express": "^1.2.5",
     "node-fs-extra": "^0.8.2",
     "nodemailer": "^4.6.4",
-    "sequelize": "^4.37.6",
+    "sequelize": "^5.15.1",
     "sequelize-cli": "^4.0.0",
     "slugify": "^1.2.9",
     "sqlite3": "^4.0.0",
