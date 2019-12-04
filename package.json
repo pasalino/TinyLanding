@@ -45,7 +45,7 @@
     "http-errors": "latest",
     "jquery": "^3.3.1",
     "json2csv": "^4.1.2",
-    "morgan": "^1.9.0",
+    "morgan": "^1.9.1",
     "mustache": "latest",
     "mustache-express": "^1.2.5",
     "node-fs-extra": "^0.8.2",
